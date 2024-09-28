@@ -1,0 +1,297 @@
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+header {
+    background-image: url('file:///home/tkrinas/Downloads/natassa/images/background.jpeg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: #508f29 3px solid;
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex; /* Use flexbox for proper alignment */
+    justify-content: center; /* Align navigation to the center */
+}
+
+header li {
+    display: inline-block;
+    margin: 0 10px; /* Adjust margin between items */
+    text-align: center;
+}
+
+header a {
+    text-decoration: underline;
+    text-decoration-thickness: 3px; /* Thicker underline */
+    text-decoration-color: #508f29; /* Green color for the underline */
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    transition: opacity 0.3s ease, text-decoration-color 0.3s ease; /* Smooth transition */
+    color: #003366;
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #508f29;
+    text-decoration-color: #003366; /* Reverse the color on hover */
+}
+
+.lang-en, .lang-gr {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    opacity: 0; /* Hide the inactive language */
+    transition: opacity 0.3s ease; /* Smooth opacity transition */
+}
+
+.lang-en.active, .lang-gr.active {
+    opacity: 1; /* Show active language */
+    position: relative;
+}
+
+/* Logo placement and centering */
+#uoa-logo {
+    width: 100px; /* Adjust size */
+    height: auto;
+    display: block;
+    margin: 0 auto 20px auto; /* Center logo above nav */
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+#showcase {
+    min-height: 300px;
+    background: #003366;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+#showcase .profile-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+#showcase .profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #508f29;
+}
+
+/* Adding green line under profile image */
+.profile-container::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 5px;
+    background-color: #508f29;
+    width: 180px;
+}
+
+#showcase .profile-text {
+    text-align: left;
+    max-width: 50%;
+}
+
+#showcase h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+#showcase p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.social-links {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.social-links a {
+    margin-right: 15px;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.social-links a svg {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+/* Footer styling */
+footer {
+    padding: 20px;
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #003366;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Research, Distinctions, Publications, and Teaching section styling */
+#research, #distinctions, #publications, #teaching {
+    padding: 30px 0;
+    background-color: #f4f4f4;
+}
+
+#research h2, #distinctions h2, #publications h2, #teaching h2 {
+    color: #003366;
+    text-align: center;
+}
+
+#research ul, #distinctions ul, #publications ul, #teaching ul {
+    list-style: none;
+    padding: 0;
+}
+
+#research ul li, #distinctions ul li, #publications ul li, #teaching ul li {
+    padding: 10px;
+    background: #ffffff;
+    margin-bottom: 10px;
+    border-left: 5px solid #508f29;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#research ul li h3, #distinctions ul li h3, #publications ul li h3, #teaching ul li h3 {
+    margin: 0;
+    color: #003366;
+}
+
+#research ul li p, #distinctions ul li p, #publications ul li p, #teaching ul li p {
+    margin: 5px 0;
+}
+
+/* Back to top button */
+#back-to-top {
+    position: fixed;
+    bottom: 44px;
+    right: 20px;
+    display: none; /* Initially hidden */
+    background-color: #508f29;
+    color: #ffffff;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+#back-to-top a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#back-to-top:hover {
+    background-color: #3a6b1e;
+}
+
+/* Language dropdown */
+.lang-dropdown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+}
+
+.lang-btn {
+    background-color: #003366;
+    border: 2px solid #508f29;
+    color: #ffffff;
+    padding: 8px 12px;
+    font-size: 12.8px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.lang-btn:hover {
+    background-color: #508f29;
+}
+
+.lang-arrow-down {
+    margin-left: 8px;
+    width: 9.6px;
+    height: 9.6px;
+    transition: transform 0.3s ease;
+}
+
+.lang-btn[aria-expanded="true"] .lang-arrow-down {
+    transform: rotate(180deg);
+}
+
+.dropdown-menu {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #ffffff;
+    color: #003366;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    z-index: 1000;
+    display: none;
+    min-width: 80px;
+    border: 1px solid #508f29;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 8px 16px;
+    display: block;
+    text-align: left;
+    color: #003366;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: #f4f4f4;
+    color: #508f29;
+    border-left: 5px solid #508f29;
+}
