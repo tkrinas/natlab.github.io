@@ -19,6 +19,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+    flex-wrap: wrap; /* Ensure content wraps on small screens */
 }
 
 /* Align the logo to the left */
@@ -41,6 +42,7 @@ header ul {
     list-style: none;
     display: flex; /* Use flexbox for proper alignment */
     justify-content: center; /* Align navigation to the center */
+    flex-wrap: wrap; /* Ensure navigation items wrap on smaller screens */
 }
 
 header li {
@@ -66,6 +68,7 @@ header a:hover {
     text-decoration-color: #003366; /* Reverse the color on hover */
 }
 
+/* Language switch styles */
 .lang-en, .lang-gr {
     position: absolute;
     top: 0;
@@ -94,6 +97,7 @@ header nav {
     margin-top: 10px;
 }
 
+/* Showcase section */
 #showcase {
     min-height: 300px;
     background: #003366;
@@ -103,64 +107,6 @@ header nav {
     align-items: center;
     justify-content: center;
     position: relative;
-}
-
-#showcase .profile-container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: relative;
-}
-
-#showcase .profile-image {
-    width: 180px;
-    height: 180px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #508f29;
-}
-
-/* Adding green line under profile image */
-.profile-container::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    height: 5px;
-    background-color: #508f29;
-    width: 180px;
-}
-
-#showcase .profile-text {
-    text-align: left;
-    max-width: 50%;
-}
-
-#showcase h1 {
-    font-size: 48px;
-    margin-bottom: 10px;
-}
-
-#showcase p {
-    font-size: 20px;
-    margin-bottom: 20px;
-}
-
-.social-links {
-    display: flex;
-    justify-content: flex-end;
-    margin-top: 10px;
-}
-
-.social-links a {
-    margin-right: 15px;
-    color: #ffffff;
-    text-decoration: none;
-}
-
-.social-links a svg {
-    vertical-align: middle;
-    margin-right: 5px;
 }
 
 /* Footer styling */
@@ -176,7 +122,7 @@ footer p {
     margin: 0;
 }
 
-/* Research, Distinctions, Publications, and Teaching section styling */
+/* Section styling */
 #research, #distinctions, #publications, #teaching {
     padding: 30px 0;
     background-color: #f4f4f4;
@@ -307,4 +253,48 @@ footer p {
     background-color: #f4f4f4;
     color: #508f29;
     border-left: 5px solid #508f29;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #uoa-logo {
+        max-width: 150px; /* Reduce logo size on tablets */
+    }
+
+    header ul {
+        flex-direction: column; /* Stack navigation items vertically */
+    }
+
+    header ul li {
+        margin: 10px 0;
+    }
+
+    header a {
+        font-size: 16px; /* Reduce font size for mobile */
+    }
+
+    #lang-menu button {
+        padding: 8px;
+        margin: 5px;
+    }
+}
+
+@media (max-width: 480px) {
+    #uoa-logo {
+        max-width: 100px; /* Further reduce logo size on small screens */
+    }
+
+    header a {
+        font-size: 14px;
+    }
+
+    #lang-menu button {
+        padding: 6px;
+        font-size: 14px;
+    }
 }
