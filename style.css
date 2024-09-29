@@ -321,9 +321,10 @@ footer p {
     }
 
     .profile-image {
-        margin: 0; /* Remove auto-centering */
         float: center; /* Move the image to the left */
-        margin-right: 0px; /* Add space between the image and text content */
+        margin-right: 10px; /* Add space between the image and text content */
+        padding-top: 5px; /* Add 5px padding at the top */
+        margin: 0 auto; /* Center the image by default */
     }
 
     #uoa-logo {
@@ -351,9 +352,10 @@ footer p {
 @media (max-width: 480px) {
 
     .profile-image {
-        margin: 0; /* Remove auto-centering */
         float: center; /* Move the image to the left */
-        margin-right: 0px; /* Add space between the image and text content */
+        margin-right: 10px; /* Add space between the image and text content */
+        padding-top: 5px; /* Add 5px padding at the top */
+        margin: 0 auto; /* Center the image by default */
     }
 
     #uoa-logo {
