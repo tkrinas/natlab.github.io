@@ -313,6 +313,23 @@ footer p {
 }
 
 
+/* Styling for the phone numbers */
+.phone-number {
+    color: #508f29; /* Green color for visibility */
+    font-size: 16px;
+    text-decoration: none; /* No underline */
+}
+
+/* Hover effect for phone numbers */
+.phone-number:hover {
+    color: #3a6b1e; /* Darker green on hover */
+}
+
+/* Visited phone number color (for consistency, though it’s not a link) */
+.phone-number:visited {
+    color: #508f29; /* Keep visited phone numbers green */
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .header-container {
