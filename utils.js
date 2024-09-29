@@ -41,6 +41,11 @@ function setLanguage(lang) {
     const greekElements = document.querySelectorAll('.lang-gr');
     
     if (lang === 'en') {
+        // Switch to the English logo
+        if (logo) {
+            logo.src = 'images/uoa_logo_en.svg'; // Update the image source to English
+        }
+
         englishElements.forEach(el => {
             el.classList.add('active');
             el.style.display = 'inline'; // Show English elements
@@ -49,7 +54,13 @@ function setLanguage(lang) {
             el.classList.remove('active');
             el.style.display = 'none'; // Hide Greek elements
         });
+
     } else {
+        // Switch to the Greek logo
+        if (logo) {
+            logo.src = 'images/uoa_logo_gr.svg'; // Update the image source to Greek
+        }
+
         greekElements.forEach(el => {
             el.classList.add('active');
             el.style.display = 'inline'; // Show Greek elements

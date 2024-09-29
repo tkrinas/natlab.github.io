@@ -13,6 +13,19 @@ body {
     overflow: hidden;
 }
 
+/* Styling for the header layout */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+/* Align the logo to the left */
+.logo-container {
+    flex: 0 1 auto;
+}
+
 header {
     background-image: url('file:///home/tkrinas/Downloads/natassa/images/background.jpeg');
     background-size: cover;
