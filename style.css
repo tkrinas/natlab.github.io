@@ -321,7 +321,7 @@ footer p {
     }
 
     .profile-image {
-        margin: 5px 20px 0 0; /* Add 5px top margin, align left, and 20px right margin */
+        margin: 8px 40px 0 0; /* Add 8px top margin, align left, and 40px right margin */
         float: center; /* Move the image to the left */
     }
 
@@ -347,7 +347,7 @@ footer p {
 
     /* If you're using icons (e.g., SVGs), reduce their size by 20% as well */
     .social-links a svg {
-        width: 80%; /* Reduce icon size by 20% */
+        width: 20px;
         height: auto;
     }
 
@@ -360,7 +360,7 @@ footer p {
 @media (max-width: 480px) {
 
     .profile-image {
-        margin: 5px 20px 0 0; /* Add 5px top margin, align left, and 20px right margin */
+        margin: 8px 40px 0 0; /* Add 8px top margin, align left, and 40px right margin */
         float: center; /* Move the image to the left */
     }
 
@@ -370,7 +370,7 @@ footer p {
 
     /* If you're using icons (e.g., SVGs), reduce their size by 20% as well */
     .social-links a svg {
-        width: 80%; /* Reduce icon size by 20% */
+        width: 20px;
         height: auto;
     }
 
