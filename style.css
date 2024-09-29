@@ -29,13 +29,14 @@ body {
 
 /* Make the profile image circular */
 .profile-image {
-    width: 180px; /* Adjust size as needed */
-    height: 180px; /* Ensure the height matches the width to maintain a perfect circle */
-    border-radius: 50%; /* This makes the image a circle */
-    object-fit: cover; /* Ensures the image is scaled to cover the container without distortion */
-    border: 5px solid #508f29; /* Optional: add a border around the circular image */
+    width: 180px; /* Keep the circular size */
+    height: 180px;
+    border-radius: 50%; /* Make it circular */
+    object-fit: cover; /* Ensure the image covers the area without distortion */
+    border: 5px solid #508f29; /* Add a green border */
     display: block;
-    margin: 0 auto; /* Center the image if needed */
+    padding-top: 5px; /* Add 5px padding at the top */
+    margin: 0 auto; /* Center the image by default */
 }
 
 header {
@@ -315,6 +316,12 @@ footer p {
     .header-container {
         flex-direction: column;
         text-align: center;
+    }
+
+    .profile-image {
+        margin: 0; /* Remove auto-centering */
+        float: left; /* Move the image to the left */
+        margin-right: 20px; /* Add space between the image and text content */
     }
 
     #uoa-logo {
