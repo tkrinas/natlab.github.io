@@ -25,14 +25,17 @@ body {
 /* Align the logo to the left */
 .logo-container {
     flex: 0 1 auto;
-    /* Make the logo image circular */
-    width: 200px; /* Adjust size as needed */
-    height: 200px; /* Ensure the height matches the width to maintain a perfect circle */
+}
+
+/* Make the profile image circular */
+.profile-image {
+    width: 180px; /* Adjust size as needed */
+    height: 180px; /* Ensure the height matches the width to maintain a perfect circle */
     border-radius: 50%; /* This makes the image a circle */
     object-fit: cover; /* Ensures the image is scaled to cover the container without distortion */
-    border: 3px solid #508f29; /* Optional: add a border around the circular logo */
+    border: 5px solid #508f29; /* Optional: add a border around the circular image */
     display: block;
-    margin: 0 auto; /* Center the logo */
+    margin: 0 auto; /* Center the image if needed */
 }
 
 header {
@@ -261,6 +264,31 @@ footer p {
     background-color: #f4f4f4;
     color: #508f29;
     border-left: 5px solid #508f29;
+}
+
+/* Styling for social media links */
+.social-links a {
+    margin-right: 15px;
+    color: #508f29; /* Change link color to green */
+    text-decoration: none;
+    font-size: 18px; /* Adjust size if necessary */
+}
+
+/* Hover effect for social media links */
+.social-links a:hover {
+    color: #3a6b1e; /* Darker green on hover */
+}
+
+/* Visited links for social media */
+.social-links a:visited {
+    color: #508f29; /* Keep visited links the same green color */
+}
+
+/* Optional: Adjust the color of icons if any SVG is used */
+.social-links a svg {
+    fill: #508f29; /* Change SVG icon color to green */
+    vertical-align: middle;
+    margin-right: 5px;
 }
 
 /* Mobile responsiveness */
