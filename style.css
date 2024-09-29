@@ -43,6 +43,9 @@ body {
     border: 5px solid #508f29; /* Add a green border */
     display: block;
     margin: 0 auto; /* Center image on mobile by default */
+    display: flex; /* Apply flexbox to align items */
+    justify-content: flex-start; /* Align the profile image and text to the start (left) */
+    align-items: left;
 }
 
 header {
@@ -349,16 +352,9 @@ footer p {
         text-align: center;
     }
 
-    .profile-container {
-        display: flex; /* Apply flexbox to align items */
-        justify-content: flex-start; /* Align the profile image and text to the start (left) */
-        align-items: center;
-    }
-
     .profile-image {
-        margin: 0; /* Remove auto centering */
-        margin-right: 20px; /* Add space between the image and text on the right */
-        float: left; /* Align image to the left on desktop */
+        margin-right: 20px; /* Add space between the image and text content */
+        float: center; /* Align image to the left on desktop */
     }
 
     #uoa-logo {
@@ -397,6 +393,7 @@ footer p {
 
     .profile-image {
         margin-right: 20px; /* Add space between the image and text content */
+        float: center; /* Align image to the left on desktop */
     }
 
     .social-links a {
