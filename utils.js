@@ -49,7 +49,7 @@ function setLanguage(lang) {
         }
 
         if (langCode) {
-            logo.innerText = 'EN';
+            langCode.innerText = 'EN';
         }
 
         englishElements.forEach(el => {
@@ -68,7 +68,7 @@ function setLanguage(lang) {
         }
 
         if (langCode) {
-            logo.innerText = 'GR';
+            langCode.innerText = 'GR';
         }
 
         greekElements.forEach(el => {
