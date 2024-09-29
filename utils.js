@@ -39,6 +39,7 @@ document.addEventListener('DOMContentLoaded', function() {
 function setLanguage(lang) {
     const englishElements = document.querySelectorAll('.lang-en');
     const greekElements = document.querySelectorAll('.lang-gr');
+    const logo = document.getElementById('uoa-logo');
     
     if (lang === 'en') {
         // Switch to the English logo
