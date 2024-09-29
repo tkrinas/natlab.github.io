@@ -34,7 +34,7 @@ body {
     flex: 0 1 auto;
 }
 
-/* Make the profile image circular */
+/* Base styling for profile image */
 .profile-image {
     width: 180px; /* Keep the circular size */
     height: 180px;
@@ -43,9 +43,16 @@ body {
     border: 5px solid #508f29; /* Add a green border */
     display: block;
     padding-top: 5px; /* Add 5px padding at the top */
-    margin: 0 auto; /* Center the image by default */
-    float: left; /* Move the image to the left */
-    margin-right: 20px; /* Add space between the image and text content */
+    margin: 0 auto; /* Center the image */
+}
+
+/* Center the profile image on larger screens using flexbox */
+.profile-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center if needed */
+    flex-direction: column; /* Stack elements vertically */
+    padding-top: 20px; /* Optional: Adjust padding to fine-tune positioning */
 }
 
 header {
@@ -353,8 +360,7 @@ footer p {
     }
 
     .profile-image {
-        margin: 8px 40px 0 0; /* Add 8px top margin, align left, and 40px right margin */
-        float: center; /* Move the image to the left */
+        margin-right: 20px; /* Add space between the image and text content */
     }
 
     #uoa-logo {
@@ -392,8 +398,7 @@ footer p {
 @media (max-width: 480px) {
 
     .profile-image {
-        margin: 8px 40px 0 0; /* Add 8px top margin, align left, and 40px right margin */
-        float: center; /* Move the image to the left */
+        margin-right: 20px; /* Add space between the image and text content */
     }
 
     .social-links a {
