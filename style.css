@@ -321,10 +321,8 @@ footer p {
     }
 
     .profile-image {
+        margin: 5px 20px 0 0; /* Add 5px top margin, align left, and 20px right margin */
         float: center; /* Move the image to the left */
-        margin-right: 20px; /* Add space between the image and text content */
-        padding-top: 5px; /* Add 5px padding at the top */
-        margin: 0 auto; /* Center the image by default */
     }
 
     #uoa-logo {
@@ -343,6 +341,16 @@ footer p {
         font-size: 16px; /* Reduce font size for mobile */
     }
 
+    .social-links a {
+        font-size: 14.4px; /* 20% reduction from 18px */
+    }
+
+    /* If you're using icons (e.g., SVGs), reduce their size by 20% as well */
+    .social-links a svg {
+        width: 80%; /* Reduce icon size by 20% */
+        height: auto;
+    }
+
     #lang-menu button {
         padding: 8px;
         margin: 5px;
@@ -352,10 +360,18 @@ footer p {
 @media (max-width: 480px) {
 
     .profile-image {
+        margin: 5px 20px 0 0; /* Add 5px top margin, align left, and 20px right margin */
         float: center; /* Move the image to the left */
-        margin-right: 20px; /* Add space between the image and text content */
-        padding-top: 5px; /* Add 5px padding at the top */
-        margin: 0 auto; /* Center the image by default */
+    }
+
+    .social-links a {
+        font-size: 14.4px; /* 20% reduction from 18px */
+    }
+
+    /* If you're using icons (e.g., SVGs), reduce their size by 20% as well */
+    .social-links a svg {
+        width: 80%; /* Reduce icon size by 20% */
+        height: auto;
     }
 
     #uoa-logo {
