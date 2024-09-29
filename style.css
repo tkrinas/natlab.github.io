@@ -42,7 +42,6 @@ body {
     object-fit: cover; /* Ensure the image covers the area without distortion */
     border: 5px solid #508f29; /* Add a green border */
     display: block;
-    padding-top: 5px; /* Add 5px padding at the top */
     margin: 0 auto; /* Center the image */
 }
 
