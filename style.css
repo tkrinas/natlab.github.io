@@ -25,6 +25,14 @@ body {
 /* Align the logo to the left */
 .logo-container {
     flex: 0 1 auto;
+    /* Make the logo image circular */
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Ensure the height matches the width to maintain a perfect circle */
+    border-radius: 50%; /* This makes the image a circle */
+    object-fit: cover; /* Ensures the image is scaled to cover the container without distortion */
+    border: 3px solid #508f29; /* Optional: add a border around the circular logo */
+    display: block;
+    margin: 0 auto; /* Center the logo */
 }
 
 header {
