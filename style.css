@@ -291,6 +291,25 @@ footer p {
     margin-right: 5px;
 }
 
+
+/* Styling for the email link */
+.email-link {
+    color: #508f29; /* Green color for visibility */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Hover effect for email link */
+.email-link:hover {
+    color: #3a6b1e; /* Darker green on hover */
+}
+
+/* Visited email link color */
+.email-link:visited {
+    color: #508f29; /* Keep visited email links green */
+}
+
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .header-container {
