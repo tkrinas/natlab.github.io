@@ -42,16 +42,8 @@ body {
     object-fit: cover; /* Ensure the image covers the area without distortion */
     border: 5px solid #508f29; /* Add a green border */
     display: block;
-    margin: 0 auto; /* Center the image */
-}
-
-/* Center the profile image on larger screens using flexbox */
-.profile-container {
-    display: flex;
-    justify-content: center; /* Horizontally center */
-    align-items: center; /* Vertically center if needed */
-    flex-direction: column; /* Stack elements vertically */
-    padding-top: 20px; /* Optional: Adjust padding to fine-tune positioning */
+    margin: 0 auto; /* Center image on mobile by default */
+    padding-top: 5px; /* Add 5px padding at the top */
 }
 
 header {
@@ -358,8 +350,16 @@ footer p {
         text-align: center;
     }
 
+    .profile-container {
+        display: flex; /* Apply flexbox to align items */
+        justify-content: flex-start; /* Align the profile image and text to the start (left) */
+        align-items: center;
+    }
+
     .profile-image {
-        margin-right: 20px; /* Add space between the image and text content */
+        margin: 0; /* Remove auto centering */
+        margin-right: 20px; /* Add space between the image and text on the right */
+        float: left; /* Align image to the left on desktop */
     }
 
     #uoa-logo {
