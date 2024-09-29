@@ -43,7 +43,6 @@ body {
     border: 5px solid #508f29; /* Add a green border */
     display: block;
     margin: 0 auto; /* Center image on mobile by default */
-    padding-top: 5px; /* Add 5px padding at the top */
 }
 
 header {
