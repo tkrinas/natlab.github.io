@@ -1,0 +1,5 @@
+User-agent: *
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://tkrinas.github.io/natlab.github.io/sitemap.xml
