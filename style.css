@@ -13,6 +13,13 @@ body {
     overflow: hidden;
 }
 
+.container h2 {
+    background-color: #508f29; /* Green background */
+    color: #ffffff; /* Optional: Change the text color to white for contrast */
+    padding: 10px; /* Optional: Add some padding for better spacing */
+    border-radius: 5px; /* Optional: Add rounded corners for a nicer look */
+}
+
 /* Styling for the header layout */
 .header-container {
     display: flex;
