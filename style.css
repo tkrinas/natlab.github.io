@@ -322,7 +322,7 @@ footer p {
 
     .profile-image {
         float: center; /* Move the image to the left */
-        margin-right: 10px; /* Add space between the image and text content */
+        margin-right: 20px; /* Add space between the image and text content */
         padding-top: 5px; /* Add 5px padding at the top */
         margin: 0 auto; /* Center the image by default */
     }
@@ -353,7 +353,7 @@ footer p {
 
     .profile-image {
         float: center; /* Move the image to the left */
-        margin-right: 10px; /* Add space between the image and text content */
+        margin-right: 20px; /* Add space between the image and text content */
         padding-top: 5px; /* Add 5px padding at the top */
         margin: 0 auto; /* Center the image by default */
     }
