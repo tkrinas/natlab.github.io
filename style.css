@@ -27,7 +27,7 @@ body {
 }
 
 header {
-    background-image: url('file:///home/tkrinas/Downloads/natassa/images/background.jpeg');
+    background-image: url('images/background.jpeg');
     background-size: cover;
     background-position: center;
     color: #ffffff;
