@@ -337,6 +337,14 @@ footer p {
     color: #508f29; /* Keep visited phone numbers green */
 }
 
+
+.nero {
+    color: #508f29; /* Green color for visibility */
+    font-size: 10px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 /* Mobile responsiveness */
 @media (max-width: 768px) {
     .header-container {
