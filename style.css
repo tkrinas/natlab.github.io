@@ -37,6 +37,8 @@ body {
     display: block;
     padding-top: 5px; /* Add 5px padding at the top */
     margin: 0 auto; /* Center the image by default */
+    float: left; /* Move the image to the left */
+    margin-right: 20px; /* Add space between the image and text content */
 }
 
 header {
@@ -320,8 +322,8 @@ footer p {
 
     .profile-image {
         margin: 0; /* Remove auto-centering */
-        float: left; /* Move the image to the left */
-        margin-right: 20px; /* Add space between the image and text content */
+        float: center; /* Move the image to the left */
+        margin-right: 0px; /* Add space between the image and text content */
     }
 
     #uoa-logo {
@@ -347,6 +349,13 @@ footer p {
 }
 
 @media (max-width: 480px) {
+
+    .profile-image {
+        margin: 0; /* Remove auto-centering */
+        float: center; /* Move the image to the left */
+        margin-right: 0px; /* Add space between the image and text content */
+    }
+
     #uoa-logo {
         max-width: 100px; /* Further reduce logo size on small screens */
     }
