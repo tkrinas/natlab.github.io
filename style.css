@@ -34,20 +34,6 @@ body {
     flex: 0 1 auto;
 }
 
-/* Base styling for profile image */
-.profile-image {
-    width: 180px; /* Keep the circular size */
-    height: 180px;
-    border-radius: 50%; /* Make it circular */
-    object-fit: cover; /* Ensure the image covers the area without distortion */
-    border: 5px solid #508f29; /* Add a green border */
-    display: block;
-    margin: 0 auto; /* Center image on mobile by default */
-    display: flex; /* Apply flexbox to align items */
-    justify-content: flex-start; /* Align the profile image and text to the start (left) */
-    align-items: left;
-}
-
 header {
     background-image: url('images/background.jpeg');
     background-size: cover;
@@ -141,6 +127,30 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Profile image styling */
+.profile-image {
+    width: 180px; /* Size of the image */
+    height: 180px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover; /* Maintain image aspect ratio */
+    border: 5px solid #508f29; /* Add a green border */
+    margin-right: 20px; /* Add space between the image and the text */
+}
+
+/* Profile text styling */
+.profile-text {
+    flex: 1; /* Allow text to take available space */
+    margin-right: 20px; /* Add space to the right of the text */
+}
+
+.profile-container {
+    display: flex;
+    justify-content: space-between; /* Space between image and text */
+    align-items: center; /* Vertically align the image, text, and language selector */
+    flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+    padding-top: 20px; /* Add padding to the top */
 }
 
 /* Section styling */
@@ -352,8 +362,13 @@ footer p {
         text-align: center;
     }
 
+    .profile-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
     .profile-image {
-        margin-right: 20px; /* Add space between the image and text content */
+        margin: 0 auto 20px auto; /* Center the image and add space below it */
         float: center; /* Align image to the left on desktop */
     }
 
@@ -391,10 +406,16 @@ footer p {
 
 @media (max-width: 480px) {
 
+    .profile-container {
+        flex-direction: column; /* Stack items vertically on smaller screens */
+        text-align: center;
+    }
+
     .profile-image {
-        margin-right: 20px; /* Add space between the image and text content */
+        margin: 0 auto 20px auto; /* Center the image and add space below it */
         float: center; /* Align image to the left on desktop */
     }
+
 
     .social-links a {
         font-size: 14.4px; /* 20% reduction from 18px */
