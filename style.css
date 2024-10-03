@@ -102,8 +102,9 @@ nav ul li ul.dropdown {
     border-radius: 8px; /* Rounded corners */
 }
 
-nav ul li:hover ul.dropdown {
-    display: block; /* Show dropdown on hover */
+nav ul li:hover ul.dropdown,
+nav ul li.active ul.dropdown {
+    display: block; /* Show dropdown on hover or active on mobile */
 }
 
 nav ul li ul.dropdown li {
@@ -399,6 +400,27 @@ footer p {
     .profile-container {
         flex-direction: column; /* Stack items vertically on smaller screens */
         text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    nav ul li {
+        position: relative;
+        margin-bottom: 15px;
+    }
+
+    nav ul li ul.dropdown {
+        position: relative;
+        background-color: rgba(255, 255, 255, 0.9); /* Slightly more solid on mobile */
+        box-shadow: none; /* Remove shadow on mobile */
+        width: 100%;
+    }
+
+    nav ul li ul.dropdown li {
+        text-align: left;
     }
 
     .profile-image {

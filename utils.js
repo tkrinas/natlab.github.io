@@ -1,3 +1,17 @@
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Handle the dropdown menu toggle on mobile devices
+    var publicationMenu = document.querySelector('li.publications');
+    if (publicationMenu) {
+        publicationMenu.addEventListener('click', function(event) {
+            event.preventDefault();
+            var dropdown = this.querySelector('ul.dropdown');
+            var expanded = this.classList.contains('active');
+            this.classList.toggle('active', !expanded);
+        });
+    }
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     // Default language setting, you can change 'en' to 'gr' for Greek
     setLanguage('en');
