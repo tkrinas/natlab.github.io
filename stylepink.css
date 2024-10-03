@@ -1,0 +1,208 @@
+/* General Body Styling */
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #3A3A3A; /* Dark Gray text similar to GWI */
+    margin: 0;
+    padding: 0;
+    background-color: #F5F5F7; /* Light background gray */
+}
+
+/* Container Styling */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Section Headers */
+.container h2 {
+    background-color: #002B5C; /* Dark Blue similar to GWI */
+    color: #FFFFFF; /* White text */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Header Layout */
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    flex-wrap: wrap;
+}
+
+/* Header Background and Navigation */
+header {
+    background-color: #002B5C; /* Dark Blue */
+    color: #ffffff;
+    padding: 20px 0;
+    border-bottom: #E5007E 3px solid; /* Pinkish accent similar to GWI */
+}
+
+header ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+header li {
+    display: inline-block;
+    margin: 0 10px;
+    text-align: center;
+}
+
+header a {
+    text-decoration: underline;
+    text-decoration-thickness: 3px;
+    text-decoration-color: #E5007E; /* Pinkish accent */
+    text-transform: uppercase;
+    font-size: 18px;
+    display: block;
+    transition: opacity 0.3s ease, text-decoration-color 0.3s ease;
+    color: #FFFFFF; /* White links */
+    font-weight: bold;
+}
+
+header a:hover {
+    color: #E5007E;
+    text-decoration-color: #FFFFFF;
+}
+
+/* Dropdown Submenu Styling */
+nav ul li.has-submenu .submenu {
+    background-color: #F5F5F7; /* Light gray background for dropdowns */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+nav ul li ul li a {
+    color: #3A3A3A; /* Dark Gray Text */
+}
+
+nav ul li ul li a:hover {
+    background-color: #E5007E; /* Pinkish hover effect */
+    color: #ffffff;
+}
+
+/* Profile Section Styling */
+#showcase {
+    min-height: 300px;
+    background: #002B5C; /* Dark Blue background */
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.profile-image {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #E5007E; /* Pinkish border */
+    margin-right: 20px;
+}
+
+.profile-text h1 {
+    color: #E5007E; /* Pinkish highlight color */
+}
+
+.profile-text p {
+    color: #3A3A3A; /* Dark Gray text */
+}
+
+/* Section Background and Text */
+#research, #distinctions, #publications, #teaching {
+    padding: 30px 0;
+    background-color: #ffffff;
+}
+
+#research h2, #distinctions h2, #publications h2, #teaching h2 {
+    color: #002B5C;
+    text-align: center;
+}
+
+#research ul li, #distinctions ul li, #publications ul li, #teaching ul li {
+    background-color: #F5F5F7;
+    border-left: 5px solid #E5007E;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#research ul li h3, #distinctions ul li h3, #publications ul li h3, #teaching ul li h3 {
+    color: #002B5C;
+}
+
+#research ul li p, #distinctions ul li p, #publications ul li p, #teaching ul li p {
+    color: #3A3A3A;
+}
+
+/* Footer */
+footer {
+    padding: 20px;
+    color: #ffffff;
+    background-color: #002B5C; /* Dark Blue */
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+}
+
+footer a {
+    color: #E5007E; /* Pink links in footer */
+}
+
+footer a:hover {
+    color: #ffffff;
+}
+
+/* Back to Top Button */
+#back-to-top {
+    background-color: #E5007E;
+    color: #ffffff;
+    padding: 10px 15px;
+}
+
+#back-to-top:hover {
+    background-color: #C30063;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .profile-image {
+        margin: 0 auto 20px auto;
+    }
+
+    header ul {
+        flex-direction: column;
+    }
+
+    header a {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-image {
+        margin: 0 auto 20px auto;
+    }
+
+    header a {
+        font-size: 14px;
+    }
+}
