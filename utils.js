@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    // Default language setting, you can change 'en' to 'gr' for Greek
+    setLanguage('en');
+
     var langToggle = document.getElementById('lang-toggle');
     if (langToggle) {
         langToggle.addEventListener('click', function() {
