@@ -62,7 +62,6 @@ header a {
     text-decoration: underline;
     text-decoration-thickness: 3px; /* Thicker underline */
     text-decoration-color: #508f29; /* Green color for the underline */
-    text-transform: uppercase;
     font-size: 18px;
     display: block;
     transition: opacity 0.3s ease, text-decoration-color 0.3s ease; /* Smooth transition */
@@ -88,6 +87,41 @@ header a:hover {
 .lang-en.active, .lang-gr.active {
     opacity: 1; /* Show active language */
     position: relative;
+}
+
+/* Dropdown styling */
+nav ul li ul.dropdown {
+    display: none; /* Hide the dropdown by default */
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7); /* Transparent background */
+    padding: 10px;
+    list-style: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow */
+    z-index: 1000;
+    min-width: 180px; /* Minimum width for the dropdown */
+    border-radius: 8px; /* Rounded corners */
+}
+
+nav ul li:hover ul.dropdown {
+    display: block; /* Show dropdown on hover */
+}
+
+nav ul li ul.dropdown li {
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li ul.dropdown li a {
+    padding: 10px 20px;
+    display: block;
+    color: #003366; /* Text color */
+    text-decoration: none;
+    border-radius: 8px; /* Rounded corners */
+}
+
+nav ul li ul.dropdown li a:hover {
+    background-color: rgba(80, 143, 41, 0.8); /* Semi-transparent green on hover */
+    color: #ffffff; /* White text on hover */
 }
 
 /* Logo placement and centering */
