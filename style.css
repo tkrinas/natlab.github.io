@@ -414,7 +414,7 @@ footer p {
 
     nav ul li ul.dropdown {
         position: relative;
-        background-color: rgba(255, 255, 255, 0.9); /* Slightly more solid on mobile */
+        background-color: rgba(255, 255, 255, 0.85); /* Slightly more solid on mobile */
         box-shadow: none; /* Remove shadow on mobile */
         width: 100%;
     }
