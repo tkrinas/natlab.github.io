@@ -35,12 +35,12 @@ body {
 }
 
 header {
-    background-image: url('images/background.jpeg');
-    background-size: cover;
-    background-position: center;
+    background: linear-gradient(to bottom, #649bd1, #82d94c);
     color: #ffffff;
+    transition: background 1s ease-in-out;
+    background-position: center;
     padding: 20px 0;
-    border-bottom: #508f29 3px solid;
+    border-bottom: #649bd1 3px solid;
 }
 
 header ul {
