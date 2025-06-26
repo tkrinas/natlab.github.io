@@ -1,0 +1,28 @@
+# Professor Natassa Pippa - Academic Website
+
+> Professor Natassa Pippa is an Assistant Professor at the National and Kapodistrian University of Athens, specializing in Pharmaceutical Technology with a focus on drug delivery systems, nanotechnology, and advanced pharmaceutical formulations.
+
+This website provides detailed information about Professor Natassa Pippa's research, publications, academic distinctions, teaching activities, and professional network. The site is structured to present her extensive work in pharmaceutical technology, including her contributions to drug delivery systems, nanomedicine, and quality assurance in pharmaceutical products.
+
+## Profile
+
+- [Academic Background](https://natassapippa.gr/index.html#main): Information about Professor Pippa's current position and research focus at the National and Kapodistrian University of Athens.
+
+## Research
+
+- [Research Interests](https://natassapippa.gr/index.html#research): Detailed information about Professor Pippa's research in drug delivery systems, pharmaceutical technology, nanotechnology, protein/peptide delivery, physicochemical evaluation, and quality assurance.
+
+## Publications
+
+- [Selected Publications](https://natassapippa.gr/index.html#publications): A curated list of significant research papers published by Professor Pippa, focusing on drug delivery systems, nanotechnology, and pharmaceutical formulations.
+- [Books](https://natassapippa.gr/index.html#books): Books authored or co-authored by Professor Pippa on pharmaceutical technology, nanomedicine, and biomedical applications.
+
+## Academic Activities
+
+- [Teaching](https://natassapippa.gr/index.html#teaching): Information about undergraduate and postgraduate courses taught by Professor Pippa, including e-learning programs and lifelong learning initiatives.
+- [Awards and Distinctions](https://natassapippa.gr/index.html#distinctions): Recognition received for academic and research excellence, including international awards and patents.
+
+## Optional
+
+- [Professional Network](https://natassapippa.gr/index.html#team): Information about Professor Pippa's collaborators, research team members, and institutional affiliations.
+- [Contact Information](https://natassapippa.gr/index.html#footer): Professional contact details for reaching Professor Pippa for academic or research inquiries.
