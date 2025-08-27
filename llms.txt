@@ -6,7 +6,7 @@ This website provides detailed information about Professor Natassa Pippa's resea
 
 ## Profile
 
-- [Academic Background](https://natassapippa.gr/index.html#main): Information about Professor Pippa's current position and research focus at the National and Kapodistrian University of Athens.
+- [Academic Background](https://natassapippa.gr/index.html#about): Information about Professor Pippa's current position and research focus at the National and Kapodistrian University of Athens.
 
 ## Research
 
@@ -20,9 +20,4 @@ This website provides detailed information about Professor Natassa Pippa's resea
 ## Academic Activities
 
 - [Teaching](https://natassapippa.gr/index.html#teaching): Information about undergraduate and postgraduate courses taught by Professor Pippa, including e-learning programs and lifelong learning initiatives.
-- [Awards and Distinctions](https://natassapippa.gr/index.html#distinctions): Recognition received for academic and research excellence, including international awards and patents.
-
-## Optional
-
-- [Professional Network](https://natassapippa.gr/index.html#team): Information about Professor Pippa's collaborators, research team members, and institutional affiliations.
-- [Contact Information](https://natassapippa.gr/index.html#footer): Professional contact details for reaching Professor Pippa for academic or research inquiries.
+- [Awards and Distinctions](https://natassapippa.gr/index.html#awards): Recognition received for academic and research excellence, including international awards and patents.
