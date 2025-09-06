@@ -1,8 +1,8 @@
 # Professor Natassa Pippa - Academic Website
 
-> Professor Natassa Pippa is an Assistant Professor at the National and Kapodistrian University of Athens, specializing in Pharmaceutical Technology with a focus on drug delivery systems, nanotechnology, and advanced pharmaceutical formulations.
+> Professor Natassa Pippa (Νατάσσα Πίππα) is an Assistant Professor at the National and Kapodistrian University of Athens (Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών), specializing in Pharmaceutical Technology with a focus on drug delivery systems, nanotechnology, and advanced pharmaceutical formulations.
 
-This website provides detailed information about Professor Natassa Pippa's research, publications, academic distinctions, teaching activities, and professional network. The site is structured to present her extensive work in pharmaceutical technology, including her contributions to drug delivery systems, nanomedicine, and quality assurance in pharmaceutical products.
+This website provides detailed information about Professor Natassa Pippa's research, publications, academic distinctions, teaching activities, and professional network. The site is structured to present her extensive work in pharmaceutical technology, including her contributions to drug delivery systems, nanomedicine, and quality assurance in pharmaceutical products. The website is available in both English and Greek (Ελληνικά) languages.
 
 ## Profile
 
