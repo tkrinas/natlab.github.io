@@ -1,23 +1,39 @@
-# Professor Natassa Pippa - Academic Website
+# Professor Natassa Pippa – Academic Website
 
-> Professor Natassa Pippa (Νατάσσα Πίππα) is an Assistant Professor at the National and Kapodistrian University of Athens (Εθνικό και Καποδιστριακό Πανεπιστήμιο Αθηνών), specializing in Pharmaceutical Technology with a focus on drug delivery systems, nanotechnology, and advanced pharmaceutical formulations.
+> Assistant Professor of Pharmaceutical Technology at the National and Kapodistrian University of Athens (NKUA), specializing in drug delivery systems, nanomedicine, and pharmaceutical nanotechnology.
 
-This website provides detailed information about Professor Natassa Pippa's research, publications, academic distinctions, teaching activities, and professional network. The site is structured to present her extensive work in pharmaceutical technology, including her contributions to drug delivery systems, nanomedicine, and quality assurance in pharmaceutical products. The website is available in both English and Greek (Ελληνικά) languages.
+This site presents Professor Natassa Pippa’s (Νατάσσα Πίππα) research, publications, teaching, and distinctions. Content is available in English and Greek (Ελληνικά). Use the sections below to locate specific information.
 
-## Profile
+## Key facts
 
-- [Academic Background](https://natassapippa.gr/index.html#about): Information about Professor Pippa's current position and research focus at the National and Kapodistrian University of Athens.
+- **Name:** Natassa Pippa (Νατάσσα Πίππα)
+- **Role:** Assistant Professor of Pharmaceutical Technology
+- **Affiliation:** National and Kapodistrian University of Athens (ΕΚΠΑ / NKUA), Department of Pharmacy, Division of Pharmaceutical Technology
+- **Contact:** natpippa@pharm.uoa.gr
+- **Location:** University Campus, 15771 Athens, Greece
+
+## Profile and background
+
+- [About](https://natassapippa.gr/#about): Current position, affiliation, contact details, and short research summary
 
 ## Research
 
-- [Research Interests](https://natassapippa.gr/index.html#research): Detailed information about Professor Pippa's research in drug delivery systems, pharmaceutical technology, nanotechnology, protein/peptide delivery, physicochemical evaluation, and quality assurance.
+- [Research interests](https://natassapippa.gr/#research): Drug delivery and advanced drug delivery systems, pharmaceutical technology and nanotechnology, liposomes and nanosystems, protein/peptide delivery, physicochemical and thermodynamic evaluation, quality assurance and regulation
+- [Techniques](https://natassapippa.gr/#research): Light scattering, DSC, freeze-drying, spectroscopy, confocal microscopy, SEM, AFM
 
-## Publications
+## Publications and scholarly profiles
 
-- [Selected Publications](https://natassapippa.gr/index.html#publications): A curated list of significant research papers published by Professor Pippa, focusing on drug delivery systems, nanotechnology, and pharmaceutical formulations.
-- [Books](https://natassapippa.gr/index.html#books): Books authored or co-authored by Professor Pippa on pharmaceutical technology, nanomedicine, and biomedical applications.
+- [Selected publications](https://natassapippa.gr/#publications): Research articles and reviews in drug delivery, nanomedicine, and pharmaceutical formulations
+- [Books](https://natassapippa.gr/#books): Books and edited volumes on pharmaceutical technology, nanomedicine, and biomedical applications
+- [Google Scholar](https://scholar.google.com/citations?hl=en&user=JT7E51cAAAAJ): Full publication list and citations
+- [Scopus](https://www.scopus.com/authid/detail.uri?authorId=54974390600): Author profile
 
-## Academic Activities
+## Academic activities
 
-- [Teaching](https://natassapippa.gr/index.html#teaching): Information about undergraduate and postgraduate courses taught by Professor Pippa, including e-learning programs and lifelong learning initiatives.
-- [Awards and Distinctions](https://natassapippa.gr/index.html#awards): Recognition received for academic and research excellence, including international awards and patents.
+- [Teaching](https://natassapippa.gr/#teaching): Undergraduate and postgraduate courses, e-learning, and lifelong learning at NKUA
+- [Awards and honors](https://natassapippa.gr/#awards): L’Oréal-UNESCO For Women in Science, IAAM awards, Lindau Nobel Laureate Meeting, and other distinctions
+
+## Optional
+
+- [LinkedIn](https://www.linkedin.com/in/natassapippa/)
+- [Facebook](https://www.facebook.com/natassa.pippa)

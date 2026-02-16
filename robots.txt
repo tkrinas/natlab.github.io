@@ -1,5 +1,7 @@
+# https://natassapippa.gr
 User-agent: *
-Disallow: /admin/
 Allow: /
+Disallow: /admin/
 
+# LLM/AI crawlers: structured site summary at /llms.txt
 Sitemap: https://natassapippa.gr/sitemap.xml
