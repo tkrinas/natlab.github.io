@@ -10987,6 +10987,7 @@ section.resume-section .resume-section-content {
 .book-cover {
   width: 48px;
   height: auto;
+  flex-shrink: 0;
   border-radius: .25rem;
   box-shadow: 0 .25rem .5rem rgba(0,0,0,.15);
   object-fit: cover;

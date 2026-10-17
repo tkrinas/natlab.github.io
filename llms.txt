@@ -20,7 +20,7 @@ Section links below are anchors on that page, not separate documents. For the fu
 ## Publications
 
 - [Selected publications](https://natassapippa.gr/#publications): Nine selected research articles and reviews. Not the full list
-- [Books](https://natassapippa.gr/#books): Five books on pharmaceutical technology, nanomedicine, and biomedical nanosystems, linked to Amazon
+- [Books](https://natassapippa.gr/#books): Five edited volumes (2019–2023) on pharmaceutical technology, nanomedicine, and biomedical nanosystems, linked to Amazon
 - [Google Scholar](https://scholar.google.com/citations?user=JT7E51cAAAAJ): Full publication list and citations
 - [Scopus](https://www.scopus.com/authid/detail.uri?authorId=54974390600): Author profile, authorId 54974390600
 
