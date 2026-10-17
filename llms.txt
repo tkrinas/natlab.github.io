@@ -1,37 +1,34 @@
-# Professor Natassa Pippa – Academic Website
+# Natassa Pippa
 
-> Assistant Professor of Pharmaceutical Technology at the National and Kapodistrian University of Athens (NKUA), specializing in drug delivery systems, nanomedicine, and pharmaceutical nanotechnology.
+> Natassa Pippa (Νατάσσα Πίππα) is Associate Professor of Pharmaceutical Technology at the National and Kapodistrian University of Athens (NKUA / ΕΚΠΑ), Department of Pharmacy, Division of Pharmaceutical Technology. The site is one English page. There is no separate Greek version.
 
-This site presents Professor Natassa Pippa’s (Νατάσσα Πίππα) research, publications, teaching, and distinctions. Content is available in English and Greek (Ελληνικά). Use the sections below to locate specific information.
+Single page: https://natassapippa.gr/
+Section links below are anchors on that page, not separate documents. For the full publication list, use Google Scholar or Scopus rather than the selected items on the page.
 
-## Key facts
+- Also known as Anastasia-Georgia Pippa, the name on the Horizon 2020 Seal of Excellence proposal.
+- Email: natpippa@pharm.uoa.gr
+- Phone: +30 6946253628, +30 210 7274037
+- Address: University Campus, 15771 Athens, Greece
+- Research: drug delivery systems (liposomes, polymersomes, nanoemulsions, dendrimers, micelles, hydrogels), nanomedicine, physicochemical characterization, and quality assurance of medicines, cosmetics, food supplements, and medical devices.
+- Notable selected papers on the page include work in Nature Aging (2025), Molecular Cell (2023), Langmuir (2024), and Journal of Materials Chemistry B (2024).
+- Distinctions on the page include the L'Oréal-UNESCO For Women in Science award (2021), the IAAM Young Scientist Award, the IAAM Scientist Medal (2016), and the 68th Lindau Nobel Laureate Meeting (2018).
 
-- **Name:** Natassa Pippa (Νατάσσα Πίππα)
-- **Role:** Assistant Professor of Pharmaceutical Technology
-- **Affiliation:** National and Kapodistrian University of Athens (ΕΚΠΑ / NKUA), Department of Pharmacy, Division of Pharmaceutical Technology
-- **Contact:** natpippa@pharm.uoa.gr
-- **Location:** University Campus, 15771 Athens, Greece
+## Profile
 
-## Profile and background
+- [About](https://natassapippa.gr/#about): Position, affiliation, contact details, and research summary
+- [Research](https://natassapippa.gr/#research): Research interests, laboratory techniques, and regulatory work
 
-- [About](https://natassapippa.gr/#about): Current position, affiliation, contact details, and short research summary
+## Publications
 
-## Research
-
-- [Research interests](https://natassapippa.gr/#research): Drug delivery and advanced drug delivery systems, pharmaceutical technology and nanotechnology, liposomes and nanosystems, protein/peptide delivery, physicochemical and thermodynamic evaluation, quality assurance and regulation
-- [Techniques](https://natassapippa.gr/#research): Light scattering, DSC, freeze-drying, spectroscopy, confocal microscopy, SEM, AFM
-
-## Publications and scholarly profiles
-
-- [Selected publications](https://natassapippa.gr/#publications): Research articles and reviews in drug delivery, nanomedicine, and pharmaceutical formulations
-- [Books](https://natassapippa.gr/#books): Books and edited volumes on pharmaceutical technology, nanomedicine, and biomedical applications
-- [Google Scholar](https://scholar.google.com/citations?hl=en&user=JT7E51cAAAAJ): Full publication list and citations
-- [Scopus](https://www.scopus.com/authid/detail.uri?authorId=54974390600): Author profile
+- [Selected publications](https://natassapippa.gr/#publications): Nine selected research articles and reviews. Not the full list
+- [Books](https://natassapippa.gr/#books): Five books on pharmaceutical technology, nanomedicine, and biomedical nanosystems, linked to Amazon
+- [Google Scholar](https://scholar.google.com/citations?user=JT7E51cAAAAJ): Full publication list and citations
+- [Scopus](https://www.scopus.com/authid/detail.uri?authorId=54974390600): Author profile, authorId 54974390600
 
 ## Academic activities
 
-- [Teaching](https://natassapippa.gr/#teaching): Undergraduate and postgraduate courses, e-learning, and lifelong learning at NKUA
-- [Awards and honors](https://natassapippa.gr/#awards): L’Oréal-UNESCO For Women in Science, IAAM awards, Lindau Nobel Laureate Meeting, and other distinctions
+- [Teaching](https://natassapippa.gr/#teaching): Undergraduate, postgraduate, e-learning, and lifelong learning at NKUA
+- [Awards and honors](https://natassapippa.gr/#awards): Full list of awards, scholarships, and poster prizes
 
 ## Optional
 

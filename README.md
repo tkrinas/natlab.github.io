@@ -1,6 +1,6 @@
 # Professor Natassa Pippa - Personal Webpage
 
-This repository contains the source code and assets for the personal webpage of **Professor Natassa Pippa**, an Assistant Professor at the **National and Kapodistrian University of Athens (NKUA)**. The webpage showcases Professor Pippa's research, publications, awards, and academic contributions in **Pharmaceutical Technology** and **Nanotechnology**.
+This repository contains the source code and assets for the personal webpage of **Professor Natassa Pippa**, an Associate Professor at the **National and Kapodistrian University of Athens (NKUA)**. The webpage showcases Professor Pippa's research, publications, awards, and academic contributions in **Pharmaceutical Technology** and **Nanotechnology**.
 
 ## Table of Contents
 
