@@ -2,8 +2,17 @@
 <html lang="en">
     <head>
         <meta charset="utf-8" />
+        <script>
+            (function () {
+                try {
+                    var q = new URLSearchParams(location.search).get("lang");
+                    var l = q === "en" || q === "el" ? q : localStorage.getItem("lang");
+                    if (l === "el") document.documentElement.lang = "el";
+                } catch (e) {}
+            })();
+        </script>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-        <meta name="description" content="Natassa Pippa (Νατάσσα Πίππα), Associate Professor of Pharmaceutical Technology at NKUA. Research in drug delivery, nanomedicine, and liposomes.">
+        <meta name="description" content="Natassa Pippa (Νατάσσα Πίππα), Associate Professor of Pharmaceutical Technology at NKUA. Research in drug delivery, nanomedicine, and liposomes." data-i18n-attr="content:meta.description">
         <meta name="author" content="Natassa Pippa">
         <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large">
         <link rel="canonical" href="https://natassapippa.gr/">
@@ -13,27 +22,27 @@
         <link rel="me" href="https://www.linkedin.com/in/natassapippa/">
 
         <!-- Open Graph -->
-        <meta property="og:title" content="Natassa Pippa | Associate Professor of Pharmaceutical Technology, NKUA">
-        <meta property="og:description" content="Natassa Pippa (Νατάσσα Πίππα), Associate Professor of Pharmaceutical Technology at NKUA. Research in drug delivery, nanomedicine, and liposomes.">
+        <meta property="og:title" content="Natassa Pippa | Associate Professor of Pharmaceutical Technology, NKUA" data-i18n-attr="content:meta.title">
+        <meta property="og:description" content="Natassa Pippa (Νατάσσα Πίππα), Associate Professor of Pharmaceutical Technology at NKUA. Research in drug delivery, nanomedicine, and liposomes." data-i18n-attr="content:meta.description">
         <meta property="og:type" content="profile">
         <meta property="og:url" content="https://natassapippa.gr/">
         <meta property="og:image" content="https://natassapippa.gr/assets/img/profile.jpg">
-        <meta property="og:image:alt" content="Natassa Pippa, Associate Professor of Pharmaceutical Technology at NKUA">
+        <meta property="og:image:alt" content="Natassa Pippa, Associate Professor of Pharmaceutical Technology at NKUA" data-i18n-attr="content:about.photoAlt">
         <meta property="og:image:width" content="200">
         <meta property="og:image:height" content="200">
         <meta property="og:site_name" content="Natassa Pippa">
-        <meta property="og:locale" content="en_US">
+        <meta property="og:locale" content="en_US" data-i18n-attr="content:meta.ogLocale">
         <meta property="profile:first_name" content="Natassa">
         <meta property="profile:last_name" content="Pippa">
 
         <!-- Twitter Card. Portrait is 200×200, so summary is the card type that fits. -->
         <meta name="twitter:card" content="summary">
-        <meta name="twitter:title" content="Natassa Pippa | Associate Professor of Pharmaceutical Technology, NKUA">
-        <meta name="twitter:description" content="Natassa Pippa (Νατάσσα Πίππα), Associate Professor of Pharmaceutical Technology at NKUA. Research in drug delivery, nanomedicine, and liposomes.">
+        <meta name="twitter:title" content="Natassa Pippa | Associate Professor of Pharmaceutical Technology, NKUA" data-i18n-attr="content:meta.title">
+        <meta name="twitter:description" content="Natassa Pippa (Νατάσσα Πίππα), Associate Professor of Pharmaceutical Technology at NKUA. Research in drug delivery, nanomedicine, and liposomes." data-i18n-attr="content:meta.description">
         <meta name="twitter:image" content="https://natassapippa.gr/assets/img/profile.jpg">
-        <meta name="twitter:image:alt" content="Natassa Pippa, Associate Professor of Pharmaceutical Technology at NKUA">
+        <meta name="twitter:image:alt" content="Natassa Pippa, Associate Professor of Pharmaceutical Technology at NKUA" data-i18n-attr="content:about.photoAlt">
 
-        <title>Natassa Pippa | Associate Professor of Pharmaceutical Technology, NKUA</title>
+        <title data-i18n="meta.title">Natassa Pippa | Associate Professor of Pharmaceutical Technology, NKUA</title>
 
 
         <link rel="icon" type="image/x-icon" href="/assets/img/favicon.ico">
@@ -49,9 +58,8 @@
         <!-- Font Awesome icons (free version)-->
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 
-        <!-- Google fonts-->
-        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
-        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Google fonts. Sofia Sans covers Latin and Greek, so both languages share one face. -->
+        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@500;700&family=Sofia+Sans:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
         <script type="application/ld+json">
@@ -153,18 +161,24 @@
         <!-- Navigation-->
         <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
             <a class="navbar-brand js-scroll-trigger" href="#page-top">
-                <span class="d-block d-lg-none">Natassa Pippa</span>
-                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Natassa Pippa, Associate Professor of Pharmaceutical Technology at NKUA" /></span>
+                <span class="d-block d-lg-none" data-i18n="name.full">Natassa Pippa</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="Natassa Pippa, Associate Professor of Pharmaceutical Technology at NKUA" data-i18n-attr="alt:about.photoAlt" /></span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="nav-tools">
+                <div class="lang-switch" role="group" data-i18n-attr="aria-label:lang.label" aria-label="Language">
+                    <button type="button" lang="en" data-lang="en" aria-pressed="true">EN</button>
+                    <button type="button" lang="el" data-lang="el" aria-pressed="false">ΕΛ</button>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle"><span class="navbar-toggler-icon"></span></button>
+            </div>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav">
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research">Research</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications">Publications</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#books">Books</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#teaching">Teaching</a></li>
-                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about" data-i18n="nav.about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#research" data-i18n="nav.research">Research</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#publications" data-i18n="nav.publications">Publications</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#books" data-i18n="nav.books">Books</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#teaching" data-i18n="nav.teaching">Teaching</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards" data-i18n="nav.awards">Awards</a></li>
                 </ul>
             </div>
         </nav>
@@ -175,22 +189,22 @@
             <section class="resume-section" id="about">
                 <div class="resume-section-content">
                     <h1 class="mb-0">
-                        Natassa
-                        <span class="text-primary">Pippa</span>
+                        <span data-i18n="name.first">Natassa</span>
+                        <span class="text-primary" data-i18n="name.last">Pippa</span>
                     </h1>
                     <div class="subheading mb-5">
-                        Division of Pharmaceutical Technology Department of Pharmacy<br>
-                        National and Kapodistrian University of Athens<br>
-                        University Campus · 15771 Athens<br>
+                        <span data-i18n="about.org">Division of Pharmaceutical Technology Department of Pharmacy</span><br>
+                        <span data-i18n="about.university">National and Kapodistrian University of Athens</span><br>
+                        <span data-i18n="about.address">University Campus · 15771 Athens</span><br>
                         +30 6946253628 · +30 210 7274037<br>
                         <a href="mailto:natpippa@pharm.uoa.gr">natpippa@pharm.uoa.gr</a>
                     </div>
-                    <p class="lead mb-5">
+                    <p class="lead mb-5" data-i18n="about.lead">
                     I am an Associate Professor at the National and Kapodistrian University of Athens, Department of Pharmacy. My research is focused on Pharmaceutical Technology, with particular expertise in advanced drug delivery systems and nanomedicine. I develop innovative nanostructures, medicines, and medical devices with the aim of enhancing therapeutic efficacy and patient outcomes.
                     </p>
                     <div class="social-icons">
-                        <a class="social-icon" href="https://www.linkedin.com/in/natassapippa/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
-                        <a class="social-icon" href="https://www.facebook.com/natassa.pippa" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
+                        <a class="social-icon" href="https://www.linkedin.com/in/natassapippa/" target="_blank" rel="noopener" aria-label="LinkedIn" data-i18n-attr="aria-label:social.linkedin"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+                        <a class="social-icon" href="https://www.facebook.com/natassa.pippa" target="_blank" rel="noopener" aria-label="Facebook" data-i18n-attr="aria-label:social.facebook"><i class="fab fa-facebook-f" aria-hidden="true"></i></a>
                     </div>
                 </div>
             </section>
@@ -199,61 +213,61 @@
             <!-- Research-->
             <section class="resume-section" id="research">
             <div class="resume-section-content">
-                <h2 class="mb-5">Research</h2>
+                <h2 class="mb-5" data-i18n="research.title">Research</h2>
 
                 <!-- Research Interests -->
-                <h3 class="mb-3">Research Interests</h3>
+                <h3 class="mb-3" data-i18n="research.interests">Research Interests</h3>
                 <ul class="mb-4">
-                <li>
+                <li data-i18n="research.i1">
                     Design and development of medicines, food supplements/nutraceuticals, cosmetics/cosmeceuticals, and medical devices; scientific advisory on the design and development of innovative dosage forms.
                 </li>
                 <li>
-                    Pharmaceutical Technology and Nanotechnology
+                    <span data-i18n="research.i2">Pharmaceutical Technology and Nanotechnology</span>
                     <ul>
-                    <li>Drug Delivery and Advanced Drug Delivery Systems</li>
+                    <li data-i18n="research.i2a">Drug Delivery and Advanced Drug Delivery Systems</li>
                     <li>
-                        Design and Development of:
+                        <span data-i18n="research.i2b">Design and Development of:</span>
                         <ul>
-                        <li>liposomes, polymersomes, polyelectrolytes, nanoemulsions, dendrimers, micelles, and mixed (chimeric) drug-delivery nanosystems</li>
-                        <li>protocells and multi-compartmentalized systems</li>
-                        <li>hydrogels</li>
+                        <li data-i18n="research.i2b1">liposomes, polymersomes, polyelectrolytes, nanoemulsions, dendrimers, micelles, and mixed (chimeric) drug-delivery nanosystems</li>
+                        <li data-i18n="research.i2b2">protocells and multi-compartmentalized systems</li>
+                        <li data-i18n="research.i2b3">hydrogels</li>
                         </ul>
                     </li>
-                    <li>Drug loading and release studies</li>
-                    <li>Protein/peptide loading and release studies</li>
-                    <li>Physicochemical and thermodynamic evaluation of excipients and nanomaterials</li>
-                    <li>Morphological characterization and fractal analysis of drug-delivery nanosystems</li>
+                    <li data-i18n="research.i2c">Drug loading and release studies</li>
+                    <li data-i18n="research.i2d">Protein/peptide loading and release studies</li>
+                    <li data-i18n="research.i2e">Physicochemical and thermodynamic evaluation of excipients and nanomaterials</li>
+                    <li data-i18n="research.i2f">Morphological characterization and fractal analysis of drug-delivery nanosystems</li>
                     </ul>
                 </li>
-                <li>Design and development of off-patented and generic medicines</li>
-                <li>Preparing scientific programs (proposals) for National and European funding</li>
+                <li data-i18n="research.i3">Design and development of off-patented and generic medicines</li>
+                <li data-i18n="research.i4">Preparing scientific programs (proposals) for National and European funding</li>
                 </ul>
 
                 <!-- Techniques -->
-                <h3 class="mb-3">Techniques</h3>
+                <h3 class="mb-3" data-i18n="research.techniques">Techniques</h3>
                 <ul class="mb-4">
-                <li>Dynamic, Static, and Electrophoretic Light Scattering</li>
-                <li>Differential Scanning Calorimetry (DSC)</li>
-                <li>Freeze-drying (lyophilization)</li>
-                <li>UV-Vis and fluorescence spectroscopy</li>
-                <li>Confocal microscopy</li>
-                <li>Scanning Electron Microscopy (SEM)</li>
-                <li>Atomic Force Microscopy (AFM)</li>
+                <li data-i18n="tech.1">Dynamic, Static, and Electrophoretic Light Scattering</li>
+                <li data-i18n="tech.2">Differential Scanning Calorimetry (DSC)</li>
+                <li data-i18n="tech.3">Freeze-drying (lyophilization)</li>
+                <li data-i18n="tech.4">UV-Vis and fluorescence spectroscopy</li>
+                <li data-i18n="tech.5">Confocal microscopy</li>
+                <li data-i18n="tech.6">Scanning Electron Microscopy (SEM)</li>
+                <li data-i18n="tech.7">Atomic Force Microscopy (AFM)</li>
                 </ul>
 
                 <!-- Quality Assurance & Regulation -->
-                <h3 class="mb-3">Quality Assurance and Regulation of Pharmaceutical Products</h3>
+                <h3 class="mb-3" data-i18n="research.qa">Quality Assurance and Regulation of Pharmaceutical Products</h3>
                 <ul class="mb-0">
-                <li>Preparation of Standard Operating Procedures (SOPs) and Working Instructions (Protocols)</li>
-                <li>
+                <li data-i18n="qa.1">Preparation of Standard Operating Procedures (SOPs) and Working Instructions (Protocols)</li>
+                <li data-i18n="qa.2">
                     Dossier scientific writing: Module 2, 4, and 5 scientific documentation (e.g., Non-Clinical and Clinical Overviews, Biowaiver justifications, Bioequivalence study overviews); dossier documentation review and audit
                 </li>
-                <li>
+                <li data-i18n="qa.3">
                     Scientific advice on appropriate tests and studies in the development of a medicine (generic/hybrid/WEU, etc.) to facilitate the development of high-quality, effective, and acceptably safe medicines
                 </li>
-                <li>Assessment of Medical Devices Technical Dossiers</li>
-                <li>Preparation of technical dossiers for cosmetics, food supplements, and medical devices</li>
-                <li>Lead auditor on ISO 9001:2015, ISO 13485:2016, and ISO 22000:2018</li>
+                <li data-i18n="qa.4">Assessment of Medical Devices Technical Dossiers</li>
+                <li data-i18n="qa.5">Preparation of technical dossiers for cosmetics, food supplements, and medical devices</li>
+                <li data-i18n="qa.6">Lead auditor on ISO 9001:2015, ISO 13485:2016, and ISO 22000:2018</li>
                 </ul>
             </div>
             </section>
@@ -262,7 +276,7 @@
             <!-- Publications-->
             <section class="resume-section" id="publications">
             <div class="resume-section-content">
-                <h2 class="mb-5">Selected Publications</h2>
+                <h2 class="mb-5" data-i18n="publications.title">Selected Publications</h2>
 
                 <div class="profile-cards row g-3 mb-5">
                 <div class="col-12 col-sm-6 col-lg-4">
@@ -272,8 +286,8 @@
                         <i class="fas fa-graduation-cap"></i>
                         </span>
                         <div class="me-2">
-                        <div class="fw-semibold">Google Scholar</div>
-                        <div class="text-muted small">Publications &amp; citations</div>
+                        <div class="fw-semibold" data-i18n="publications.scholar">Google Scholar</div>
+                        <div class="text-muted small" data-i18n="publications.scholarCaption">Publications &amp; citations</div>
                         </div>
                         <i class="fas fa-arrow-up-right-from-square ms-auto text-muted" aria-hidden="true"></i>
                     </div>
@@ -286,8 +300,8 @@
                         <i class="fas fa-microscope"></i>
                         </span>
                         <div class="me-2">
-                        <div class="fw-semibold">Scopus</div>
-                        <div class="text-muted small">Author profile</div>
+                        <div class="fw-semibold" data-i18n="publications.scopus">Scopus</div>
+                        <div class="text-muted small" data-i18n="publications.scopusCaption">Author profile</div>
                         </div>
                         <i class="fas fa-arrow-up-right-from-square ms-auto text-muted" aria-hidden="true"></i>
                     </div>
@@ -296,7 +310,7 @@
                 </div>
 
                 <!-- Research Articles -->
-                <h3 class="mb-3">Research Articles</h3>
+                <h3 class="mb-3" data-i18n="publications.articles">Research Articles</h3>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
                 <div class="flex-grow-1">
@@ -353,7 +367,7 @@
                 </div>
 
                 <!-- Reviews -->
-                <h3 class="mb-3">Reviews</h3>
+                <h3 class="mb-3" data-i18n="publications.reviews">Reviews</h3>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
                 <div class="flex-grow-1">
@@ -390,66 +404,66 @@
             <!-- ===== Books ===== -->
             <section class="resume-section" id="books">
             <div class="resume-section-content">
-                <h2 class="mb-5">Books</h2>
+                <h2 class="mb-5" data-i18n="books.title">Books</h2>
 
                 <ul class="list-unstyled">
                 <li class="mb-3 d-flex align-items-start">
                     <img class="book-cover me-3" loading="lazy"
                         src="https://m.media-amazon.com/images/I/71vHlb658ML._SL1500_.jpg"
-                        alt="Cover: From Current to Future Trends in Pharmaceutical Technology">
+                        alt="Cover: From Current to Future Trends in Pharmaceutical Technology" data-i18n-attr="alt:books.alt1">
                     <div>
                         <a class="fw-semibold" href="https://www.amazon.com/Current-Future-Trends-Pharmaceutical-Technology-ebook/dp/B0CPBSZLKN" target="_blank" rel="noopener">
                         From Current to Future Trends in Pharmaceutical Technology
                         </a>
-                        <div class="text-muted small">Editor, 2023</div>
+                        <div class="text-muted small" data-i18n="books.editor2023">Editor, 2023</div>
                     </div>
                 </li>
 
                 <li class="mb-3 d-flex align-items-start">
                     <img class="book-cover me-3" loading="lazy"
                         src="https://m.media-amazon.com/images/I/71WgR8OOzUL._SL1500_.jpg"
-                        alt="Cover: Functional Materials in Biomedical Applications">
+                        alt="Cover: Functional Materials in Biomedical Applications" data-i18n-attr="alt:books.alt2">
                     <div>
                         <a class="fw-semibold" href="https://www.amazon.com/Functional-Materials-Biomedical-Applications-Demetzos-ebook/dp/B0BZXLKY8K" target="_blank" rel="noopener">
                         Functional Materials in Biomedical Applications
                         </a>
-                        <div class="text-muted small">Editor, 2023</div>
+                        <div class="text-muted small" data-i18n="books.editor2023">Editor, 2023</div>
                     </div>
                 </li>
 
                 <li class="mb-3 d-flex align-items-start">
                     <img class="book-cover me-3" loading="lazy"
                         src="https://m.media-amazon.com/images/I/71qWQAfz3jL._SL1500_.jpg"
-                        alt="Cover: Nanomaterials for Clinical Applications: Case Studies in Nanomedicines">
+                        alt="Cover: Nanomaterials for Clinical Applications: Case Studies in Nanomedicines" data-i18n-attr="alt:books.alt3">
                     <div>
                         <a class="fw-semibold" href="https://www.amazon.com/Nanomaterials-Clinical-Applications-Nanomedicines-Technologies-ebook/dp/B084WX35W1" target="_blank" rel="noopener">
                         Nanomaterials for Clinical Applications: Case Studies in Nanomedicines
                         </a>
-                        <div class="text-muted small">Editor, 2020</div>
+                        <div class="text-muted small" data-i18n="books.editor2020">Editor, 2020</div>
                     </div>
                 </li>
 
                 <li class="mb-3 d-flex align-items-start">
                     <img class="book-cover me-3" loading="lazy"
                         src="https://m.media-amazon.com/images/I/71u5HF7-heL._SL1500_.jpg"
-                        alt="Cover: Drug Delivery Nanosystems: From Bioinspiration and Biomimetics to Clinical Applications">
+                        alt="Cover: Drug Delivery Nanosystems: From Bioinspiration and Biomimetics to Clinical Applications" data-i18n-attr="alt:books.alt4">
                     <div>
                         <a class="fw-semibold" href="https://www.amazon.com/Drug-Delivery-Nanosystems-Bioinspiration-Applications-ebook/dp/B07MFWDM2C" target="_blank" rel="noopener">
                         Drug Delivery Nanosystems: From Bioinspiration and Biomimetics to Clinical Applications
                         </a>
-                        <div class="text-muted small">Editor, 2019</div>
+                        <div class="text-muted small" data-i18n="books.editor2019">Editor, 2019</div>
                     </div>
                 </li>
 
                 <li class="mb-0 d-flex align-items-start">
                     <img class="book-cover me-3" loading="lazy"
                         src="https://m.media-amazon.com/images/I/61nOX2eGCkL._SL1246_.jpg"
-                        alt="Cover: Thermodynamics and Biophysics of Biomedical Nanosystems: Applications and Practical Considerations">
+                        alt="Cover: Thermodynamics and Biophysics of Biomedical Nanosystems: Applications and Practical Considerations" data-i18n-attr="alt:books.alt5">
                     <div>
                         <a class="fw-semibold" href="https://www.amazon.com/Thermodynamics-Biophysics-Biomedical-Nanosystems-Considerations-ebook/dp/B07FXBHV7T/" target="_blank" rel="noopener">
                         Thermodynamics and Biophysics of Biomedical Nanosystems: Applications and Practical Considerations
                         </a>
-                        <div class="text-muted small">Editor, 2019</div>
+                        <div class="text-muted small" data-i18n="books.editor2019">Editor, 2019</div>
                     </div>
                 </li>
                 </ul>
@@ -460,40 +474,40 @@
             <!-- ===== Teaching ===== -->
             <section class="resume-section" id="teaching">
             <div class="resume-section-content">
-                <h2 class="mb-5">Teaching</h2>
+                <h2 class="mb-5" data-i18n="teaching.title">Teaching</h2>
 
-                <h3 class="subheading mb-3">Undergraduate Courses</h3>
+                <h3 class="subheading mb-3" data-i18n="teaching.undergrad">Undergraduate Courses</h3>
                 <ul class="mb-4">
-                <li>Co-instructor for “Introduction to Laboratory Practice” (1st semester), Faculty of Pharmacy, NKUA (2021–present).</li>
-                <li>Co-instructor in the Laboratory Exercises of Pharmaceutical Technology (4th year), Faculty of Pharmacy, NKUA (2021–present).</li>
-                <li>Co-instructor in the Pharmaceutical Technology Laboratory Exercises Tutorial (4th year), Faculty of Pharmacy, NKUA (2022–present).</li>
-                <li>Co-instructor for the course “Design of Pharmaceutical Forms” (8th semester), Faculty of Pharmacy, NKUA (2023–present).</li>
-                <li>Participation in the elective undergraduate course “Nanomedicine,” Medical School, NKUA (4 teaching hours) (2021–present).</li>
-                <li>Co-instructor for “Pharmaceutical Technology II” (4th year), Faculty of Pharmacy, NKUA (2024–present).</li>
-                <li>Co-instructor for “Pharmaceutical Technology III” (4th year), Faculty of Pharmacy, NKUA (2024–present).</li>
+                <li data-i18n="teach.u1">Co-instructor for “Introduction to Laboratory Practice” (1st semester), Faculty of Pharmacy, NKUA (2021–present).</li>
+                <li data-i18n="teach.u2">Co-instructor in the Laboratory Exercises of Pharmaceutical Technology (4th year), Faculty of Pharmacy, NKUA (2021–present).</li>
+                <li data-i18n="teach.u3">Co-instructor in the Pharmaceutical Technology Laboratory Exercises Tutorial (4th year), Faculty of Pharmacy, NKUA (2022–present).</li>
+                <li data-i18n="teach.u4">Co-instructor for the course “Design of Pharmaceutical Forms” (8th semester), Faculty of Pharmacy, NKUA (2023–present).</li>
+                <li data-i18n="teach.u5">Participation in the elective undergraduate course “Nanomedicine,” Medical School, NKUA (4 teaching hours) (2021–present).</li>
+                <li data-i18n="teach.u6">Co-instructor for “Pharmaceutical Technology II” (4th year), Faculty of Pharmacy, NKUA (2024–present).</li>
+                <li data-i18n="teach.u7">Co-instructor for “Pharmaceutical Technology III” (4th year), Faculty of Pharmacy, NKUA (2024–present).</li>
                 </ul>
 
-                <h3 class="subheading mb-3">Postgraduate Courses</h3>
+                <h3 class="subheading mb-3" data-i18n="teaching.postgrad">Postgraduate Courses</h3>
                 <ul class="mb-4">
-                <li>Lecturer, Master’s Program “Drug Development: Research, Production, and Access,” Medical School, NKUA — Course: “Fundamentals of Pharmacology and Biotechnology” (20 teaching hours) (January 2024–present).</li>
-                <li>Participation, Master’s Program “Drug Development: Research, Production, and Access,” Medical School, NKUA (Lectures: “Defining Pharmaceutical Formulations,” “Solid Pharmaceutical Forms I,” “Pharmaceutical Stability,” “Hydrogels,” “Transdermal Drug Delivery”) (2021–2023).</li>
-                <li>Participation, Master’s Program “Clinical Pharmacy,” Faculty of Pharmacy, NKUA.</li>
-                <li>Coordinator, “Special Topics in Industrial Pharmacy,” MSc in Industrial Pharmacy, Faculty of Pharmacy, NKUA.</li>
-                <li>Seminars, MSc in Industrial Pharmacy, Division of Pharmaceutical Technology, Faculty of Pharmacy, NKUA (2018–present).</li>
-                <li>Participation, Master’s Program “Dermatopharmacology – Cosmetology,” Faculty of Pharmacy, NKUA (2-hour seminar).</li>
-                <li>Participation, Joint Master’s Program “Nanomedicine” (Medical School & Faculty of Pharmacy), NKUA (2018–present).</li>
+                <li data-i18n="teach.p1">Lecturer, Master’s Program “Drug Development: Research, Production, and Access,” Medical School, NKUA — Course: “Fundamentals of Pharmacology and Biotechnology” (20 teaching hours) (January 2024–present).</li>
+                <li data-i18n="teach.p2">Participation, Master’s Program “Drug Development: Research, Production, and Access,” Medical School, NKUA (Lectures: “Defining Pharmaceutical Formulations,” “Solid Pharmaceutical Forms I,” “Pharmaceutical Stability,” “Hydrogels,” “Transdermal Drug Delivery”) (2021–2023).</li>
+                <li data-i18n="teach.p3">Participation, Master’s Program “Clinical Pharmacy,” Faculty of Pharmacy, NKUA.</li>
+                <li data-i18n="teach.p4">Coordinator, “Special Topics in Industrial Pharmacy,” MSc in Industrial Pharmacy, Faculty of Pharmacy, NKUA.</li>
+                <li data-i18n="teach.p5">Seminars, MSc in Industrial Pharmacy, Division of Pharmaceutical Technology, Faculty of Pharmacy, NKUA (2018–present).</li>
+                <li data-i18n="teach.p6">Participation, Master’s Program “Dermatopharmacology – Cosmetology,” Faculty of Pharmacy, NKUA (2-hour seminar).</li>
+                <li data-i18n="teach.p7">Participation, Joint Master’s Program “Nanomedicine” (Medical School & Faculty of Pharmacy), NKUA (2018–present).</li>
                 </ul>
 
-                <h3 class="subheading mb-3">E-learning</h3>
+                <h3 class="subheading mb-3" data-i18n="teaching.elearning">E-learning</h3>
                 <ul class="mb-4">
-                <li>Participation in the E-Learning Program providing educational support for the program “Total Quality Management” (15/12/2022–31/7/2023).</li>
-                <li>Participation in the E-Learning Program “Law of Civil and Criminal Liability in Healthcare” (3 educational units) (9/9/2021–8/9/2026).</li>
+                <li data-i18n="teach.e1">Participation in the E-Learning Program providing educational support for the program “Total Quality Management” (15/12/2022–31/7/2023).</li>
+                <li data-i18n="teach.e2">Participation in the E-Learning Program “Law of Civil and Criminal Liability in Healthcare” (3 educational units) (9/9/2021–8/9/2026).</li>
                 </ul>
 
-                <h3 class="subheading mb-3">Lifelong Learning</h3>
+                <h3 class="subheading mb-3" data-i18n="teaching.lifelong">Lifelong Learning</h3>
                 <ul class="mb-0">
-                <li>Scientific & technological support for laboratory exercises in postgraduate seminars on “Galenic Formulations” (KERTUS ABEE), Division of Pharmaceutical Technology, Faculty of Pharmacy, NKUA (01/05/2013–30/06/2013).</li>
-                <li>Scientific & technological support for postgraduate seminars “Training Courses and Laboratory Exercises for Pharmacists and Pharmacy Assistants in Cosmetic Pharmacy,” Division of Pharmaceutical Technology, Faculty of Pharmacy, NKUA (SYNDEFMOS ABEE) (1/11/2013–30/05/2014).</li>
+                <li data-i18n="teach.l1">Scientific & technological support for laboratory exercises in postgraduate seminars on “Galenic Formulations” (KERTUS ABEE), Division of Pharmaceutical Technology, Faculty of Pharmacy, NKUA (01/05/2013–30/06/2013).</li>
+                <li data-i18n="teach.l2">Scientific & technological support for postgraduate seminars “Training Courses and Laboratory Exercises for Pharmacists and Pharmacy Assistants in Cosmetic Pharmacy,” Division of Pharmaceutical Technology, Faculty of Pharmacy, NKUA (SYNDEFMOS ABEE) (1/11/2013–30/05/2014).</li>
                 </ul>
             </div>
             </section>
@@ -503,71 +517,72 @@
             <!-- Awards-->
             <section class="resume-section" id="awards">
             <div class="resume-section-content">
-                <h2 class="mb-5">Awards & Honors</h2>
+                <h2 class="mb-5" data-i18n="awards.title">Awards & Honors</h2>
 
                 <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
                 <ul class="fa-ul mb-0">
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    International Award L’ OREAL-UNESCO for “Women in Science” 2021, Athens, 15 April 2021
+                    <span data-i18n="awards.a1">International Award L’ OREAL-UNESCO for “Women in Science” 2021, Athens, 15 April 2021</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    International Association of Advanced Materials (IAAM) Young Scientist Award (IAAM/AL-18/07-20), Urlika, Sweden
+                    <span data-i18n="awards.a2">International Association of Advanced Materials (IAAM) Young Scientist Award (IAAM/AL-18/07-20), Urlika, Sweden</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Participation in 68th Lindau Nobel Laureate Meeting, 24–29 June 2018, Lindau, Germany
+                    <span data-i18n="awards.a3">Participation in 68th Lindau Nobel Laureate Meeting, 24–29 June 2018, Lindau, Germany</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Seal of Excellence: The project proposal 740818, MIDESYVA, Mixed Delivery Systems as Vaccines Adjuvants, submitted under Horizon 2020’s Marie Skłodowska-Curie actions call H2020-MSCA-IF-2016 of 14 September 2016 by Anastasia-Georgia Pippa and UNIVERSITY OF STRATHCLYDE, following evaluation by an international panel of independent experts was scored as a high-quality project proposal in a highly competitive evaluation process
+                    <span data-i18n="awards.a4">Seal of Excellence: The project proposal 740818, MIDESYVA, Mixed Delivery Systems as Vaccines Adjuvants, submitted under Horizon 2020’s Marie Skłodowska-Curie actions call H2020-MSCA-IF-2016 of 14 September 2016 by Anastasia-Georgia Pippa and UNIVERSITY OF STRATHCLYDE, following evaluation by an international panel of independent experts was scored as a high-quality project proposal in a highly competitive evaluation process</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    International Association of Advanced Materials Scientist Medal (IAAM Scientist Medal) for the year 2016 due to notable and outstanding contribution in the field of “Advanced Materials Science and Technology”. Award ceremony of European Advanced Materials Congress 2016 on 24 August 2016 at Seaside Auditorium, M/S Mariella, Viking Line Cruise, Stockholm, Sweden
+                    <span data-i18n="awards.a5">International Association of Advanced Materials Scientist Medal (IAAM Scientist Medal) for the year 2016 due to notable and outstanding contribution in the field of “Advanced Materials Science and Technology”. Award ceremony of European Advanced Materials Congress 2016 on 24 August 2016 at Seaside Auditorium, M/S Mariella, Viking Line Cruise, Stockholm, Sweden</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Best poster presentation: Applications of DSC and imaging techniques on the development of chimeric/mixed nanosystems, N. Naziris, F. Saitta, N. Pippa, D. Stellas, V. Chrisostomou, S. Pispsas, M. Libera, M. Signorelli, C. Demetzos, D. Fessas, 13th Mediterranean Conference on Calorimetry and Thermal Analysis (Medicta 2017), 24–27 September 2017, Loano, Italy
+                    <span data-i18n="awards.a6">Best poster presentation: Applications of DSC and imaging techniques on the development of chimeric/mixed nanosystems, N. Naziris, F. Saitta, N. Pippa, D. Stellas, V. Chrisostomou, S. Pispsas, M. Libera, M. Signorelli, C. Demetzos, D. Fessas, 13th Mediterranean Conference on Calorimetry and Thermal Analysis (Medicta 2017), 24–27 September 2017, Loano, Italy</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Best Poster Presentation: Design of multi-walled carbon nanotube–liposome drug delivery platforms: a thermodynamic approach, N. Pippa, D. D. Chronopoulos, C. Demetzos, N. Tagmatarchis, Therma 2016, 7th Panhellenic Congress on Thermal Analysis and Calorimetry, 27–29 May 2014, Ioannina, Greece
+                    <span data-i18n="awards.a7">Best Poster Presentation: Design of multi-walled carbon nanotube–liposome drug delivery platforms: a thermodynamic approach, N. Pippa, D. D. Chronopoulos, C. Demetzos, N. Tagmatarchis, Therma 2016, 7th Panhellenic Congress on Thermal Analysis and Calorimetry, 27–29 May 2014, Ioannina, Greece</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Award in Excellence of Applied Pharmaceutical Technology and post-doctoral research dedicated to the memory “Kleon Tsetis”, founder of the Pharmaceutical Industry “Uni-Pharma” 2014–2015. This grant was awarded by Hellenic Pharmaceutical Society (HPS) for the period 2015–2016
+                    <span data-i18n="awards.a8">Award in Excellence of Applied Pharmaceutical Technology and post-doctoral research dedicated to the memory “Kleon Tsetis”, founder of the Pharmaceutical Industry “Uni-Pharma” 2014–2015. This grant was awarded by Hellenic Pharmaceutical Society (HPS) for the period 2015–2016</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Best Poster Presentation: Study on the physicochemical characteristics of innovative liposomal systems: the role of thermoresponsive liposomes. M. Chountoulesi, A. Kyrili, N. Pippa, A. Meristoudi, S. Pispas, C. Demetzos, 17th Panhellenic Pharmaceutical Congress, 8–11 October 2015, Athens, Greece
+                    <span data-i18n="awards.a9">Best Poster Presentation: Study on the physicochemical characteristics of innovative liposomal systems: the role of thermoresponsive liposomes. M. Chountoulesi, A. Kyrili, N. Pippa, A. Meristoudi, S. Pispas, C. Demetzos, 17th Panhellenic Pharmaceutical Congress, 8–11 October 2015, Athens, Greece</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Award in Excellence of Applied Pharmaceutical Technology and one-year Scholarship dedicated to the memory of “Kleon Tsetis”, founder of the Pharmaceutical Industry “Uni-Pharma” 2014–2015. This grant was awarded by the Hellenic Pharmaceutical Society (HPS) for the period 2014–2015
+                    <span data-i18n="awards.a10">Award in Excellence of Applied Pharmaceutical Technology and one-year Scholarship dedicated to the memory of “Kleon Tsetis”, founder of the Pharmaceutical Industry “Uni-Pharma” 2014–2015. This grant was awarded by the Hellenic Pharmaceutical Society (HPS) for the period 2014–2015</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Best Poster Presentation: “Preparation, development and in vitro release evaluation of amphotericin B-loaded amphiphilic block copolymer vectors.” N. Pippa, M. Mariaki, S. Pispas, C. Demetzos, Convention of the Hellenic Society of Biomaterials, 7–8 November 2014, B.& M. Theocharakis Foundation for the Fine Arts and Music, Athens, Greece
+                    <span data-i18n="awards.a11">Best Poster Presentation: “Preparation, development and in vitro release evaluation of amphotericin B-loaded amphiphilic block copolymer vectors.” N. Pippa, M. Mariaki, S. Pispas, C. Demetzos, Convention of the Hellenic Society of Biomaterials, 7–8 November 2014, B.& M. Theocharakis Foundation for the Fine Arts and Music, Athens, Greece</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Best Oral Presentation: “The metastable phases as modulators of functionality in chimeric liposomes.” C. Demetzos, N. Pippa, S. Pispas, Therma 2014, 26–28 September 2014, Larisa, Greece
+                    <span data-i18n="awards.a12">Best Oral Presentation: “The metastable phases as modulators of functionality in chimeric liposomes.” C. Demetzos, N. Pippa, S. Pispas, Therma 2014, 26–28 September 2014, Larisa, Greece</span>
                 </li>
                 <li>
                     <span class="fa-li"><i class="fas fa-trophy text-warning" aria-hidden="true"></i></span>
-                    Best Poster Presentation: “Physicochemical characterization of liposomal systems and fractal analysis of their morphology.” N. Pippa, S. Pispas, C. Demetzos, 1st Congress of Pharmaceutical Sciences, 27–30 April 2013, Athens, Greece
+                    <span data-i18n="awards.a13">Best Poster Presentation: “Physicochemical characterization of liposomal systems and fractal analysis of their morphology.” N. Pippa, S. Pispas, C. Demetzos, 1st Congress of Pharmaceutical Sciences, 27–30 April 2013, Athens, Greece</span>
                 </li>
                 </ul>
                 </div>
             </div>
             </section>
         </div>
-        <p class="site-note">Visits are counted with Google Analytics. <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's privacy policy</a>.</p>
+        <p class="site-note"><span data-i18n="footer.analytics">Visits are counted with Google Analytics.</span> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-i18n="footer.privacy">Google's privacy policy</a>.</p>
 
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="js/i18n.js"></script>
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>

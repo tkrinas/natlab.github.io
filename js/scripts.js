@@ -9,6 +9,13 @@
 
 window.addEventListener('DOMContentLoaded', event => {
 
+    document.querySelectorAll('.lang-switch [data-lang]').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+            applyLang(btn.getAttribute('data-lang'), true);
+        });
+    });
+    applyLang(resolveLang(), false);
+
     // Activate Bootstrap scrollspy on the main nav element
     const sideNav = document.body.querySelector('#sideNav');
     if (sideNav) {

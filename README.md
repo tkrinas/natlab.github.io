@@ -6,12 +6,8 @@ This repository contains the source code and assets for the personal webpage of 
 
 - [Demo](#demo)
 - [Features](#features)
+- [Languages](#languages)
 - [Technologies Used](#technologies-used)
-- [File Structure](#file-structure)
-- [Installation](#installation)
-- [Customization](#customization)
-- [Contributing](#contributing)
-- [License](#license)
 
 ## Demo
 
@@ -19,20 +15,28 @@ You can view the live webpage [here](https://tkrinas.github.io/natlab.github.io/
 
 ## Features
 
-- Multilingual support (English/Greek) with a dynamic language switcher.
-- Mobile responsive layout for all screen sizes.
-- Smooth scrolling and back-to-top button functionality.
-- Dropdown navigation menu for publications (Selected Papers, Books, All Papers).
+- English and Greek on one page, with an in-page language switch.
+- Side navigation on desktop and a top bar with a menu button on smaller screens.
+- Smooth scrolling between sections.
 - Structured data for SEO using `schema.org`.
-- Integration with Google Analytics (via Google Tag Manager).
-- Links to social profiles (LinkedIn, Google Scholar).
-- Clean, modern design with a professional appearance.
+- Google Analytics (`gtag.js`).
+- Links to LinkedIn, Facebook, Google Scholar, and Scopus.
+
+## Languages
+
+The page stays at one address. **EN / ΕΛ** sits under the section links on a wide screen and in the top bar on a phone, between the name and the menu button. The choice is remembered, and `?lang=el` opens the Greek text directly. The current section stays in view, and an open phone menu stays open.
+
+Translated text covers the navigation, headings, about, research, teaching, awards, and the “Editor, year” lines. Paper titles, author lists, journal names, and book titles stay in English. Strings live in `js/i18n.js`. Headings and the side menu use capitals in both languages.
+
+Both languages use the same type: **Sofia Sans Extra Condensed** for headings and **Sofia Sans** for body text. Those faces include Greek, so the type does not change when the language changes.
+
+`node js/check-i18n.js` fails if a label in `index.html` is missing from either language.
 
 ## Technologies Used
 
-- **HTML5**: Markup for structuring content.
-- **CSS3**: Custom styling, media queries, and layout.
-- **JavaScript**: DOM manipulation for language switching, smooth scrolling, and dropdown menu interaction.
-- **Google Tag Manager**: Analytics tracking.
-- **Schema.org**: Structured data for improved SEO.
-- **SVG**: High-quality logos and icons for social media links.
+- **HTML5**: Page structure, with `data-i18n` hooks for translatable text.
+- **CSS3**: Layout, the language switch, and shared styling for both languages.
+- **JavaScript**: Language switching in `js/i18n.js` and `js/scripts.js`.
+- **Google Analytics**: Visit counting via `gtag.js`.
+- **Schema.org**: Structured data in English for the public page.
+- **Sofia Sans**: Headings and body text for English and Greek.
