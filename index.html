@@ -52,23 +52,31 @@
         <link rel="manifest" href="/assets/img/site.webmanifest">
         <meta name="theme-color" content="#974a2d">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <!-- Google fonts. Sofia Sans covers Latin and Greek, so both languages share one face. -->
-        <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@500;700&family=Sofia+Sans:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet" media="print" onload="this.media='all'" />
-        <noscript><link href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Extra+Condensed:wght@500;700&family=Sofia+Sans:ital,wght@0,400;0,800;1,400;1,800&display=swap" rel="stylesheet" /></noscript>
+        <link rel="preload" href="/assets/fonts/sofia-sans-extra-condensed-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/assets/fonts/sofia-sans-extra-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
+        <link rel="preload" href="/assets/fonts/sofia-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
         <!-- Above-the-fold: nav + about. Full theme CSS loads without blocking paint. -->
         <style>
+            @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/sofia-sans-latin-400-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+            @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/sofia-sans-greek-400-normal.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+            @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:800;font-display:swap;src:url("/assets/fonts/sofia-sans-latin-800-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+            @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:800;font-display:swap;src:url("/assets/fonts/sofia-sans-greek-800-normal.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+            @font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:500;font-display:swap;src:url("/assets/fonts/sofia-sans-extra-condensed-latin-500-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+            @font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:500;font-display:swap;src:url("/assets/fonts/sofia-sans-extra-condensed-greek-500-normal.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+            @font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:700;font-display:swap;src:url("/assets/fonts/sofia-sans-extra-condensed-latin-700-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
+            @font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:700;font-display:swap;src:url("/assets/fonts/sofia-sans-extra-condensed-greek-700-normal.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
+            @font-face{font-family:"Sofia Sans Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Roboto");size-adjust:97.4%}
+            @font-face{font-family:"Sofia Sans Extra Condensed Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Roboto");size-adjust:98%}
             *,*::before,*::after{box-sizing:border-box}
             :root{--bs-primary:#974a2d;--bs-primary-rgb:151,74,45;--bs-link-color:#974a2d;--bs-link-hover-color:#7a3c24}
-            body{margin:0;padding-top:4rem;font-family:"Sofia Sans",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:1rem;line-height:1.5;color:#6c757d;background:#fff}
+            body{margin:0;padding-top:4rem;font-family:"Sofia Sans","Sofia Sans Fallback",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:1rem;line-height:1.5;color:#6c757d;background:#fff}
             a{color:#974a2d}
-            h1{margin:0;font-family:"Sofia Sans Extra Condensed",system-ui,sans-serif;font-weight:700;line-height:1;text-transform:uppercase;color:#343a40;font-size:calc(1.725rem + 5.7vw)}
+            h1{margin:0;font-family:"Sofia Sans Extra Condensed","Sofia Sans Extra Condensed Fallback",system-ui,sans-serif;font-weight:700;line-height:1;text-transform:uppercase;color:#343a40;font-size:calc(1.725rem + 5.7vw)}
             .text-primary{color:#974a2d!important}
             .mb-0{margin-bottom:0!important}
             .mb-5{margin-bottom:3rem!important}
             .p-0{padding:0!important}
-            .subheading{font-family:"Sofia Sans Extra Condensed",system-ui,sans-serif;text-transform:uppercase;font-weight:500;font-size:1.5rem}
+            .subheading{font-family:"Sofia Sans Extra Condensed","Sofia Sans Extra Condensed Fallback",system-ui,sans-serif;text-transform:uppercase;font-weight:500;font-size:1.5rem}
             p{margin:0 0 1rem}
             p.lead{font-size:1.15rem;font-weight:400}
             .d-none{display:none!important}
