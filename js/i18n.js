@@ -326,3 +326,5 @@ function writeLang(lang) {
     } catch (e2) {}
     document.documentElement.classList.add("i18n-ready");
 }
+
+if (typeof document !== "undefined") applyLang(resolveLang(), false);

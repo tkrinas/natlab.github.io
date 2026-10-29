@@ -10936,8 +10936,13 @@ p.lead {
 .social-icons .social-icon:last-child {
   margin-right: 0;
 }
+.social-icons .social-icon svg {
+  width: 1.15em;
+  height: 1.15em;
+  fill: currentColor;
+}
 .social-icons .social-icon:hover {
-  background-color: #bd5d38;
+  background-color: #974a2d;
 }
 
 .dev-icons {
@@ -10980,13 +10985,20 @@ section.resume-section .resume-section-content {
   background: rgba(var(--bs-primary-rgb), .12); color: var(--bs-primary);
   flex: 0 0 42px;
 }
+.profile-cards .icon svg,
+.icon-svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  fill: currentColor;
+  flex-shrink: 0;
+}
 @media (prefers-reduced-motion: reduce) {
   .profile-cards .card { transition: none; }
 }
 
 .book-cover {
   width: 48px;
-  height: auto;
+  height: 72px;
   flex-shrink: 0;
   border-radius: .25rem;
   box-shadow: 0 .25rem .5rem rgba(0,0,0,.15);
@@ -11007,8 +11019,28 @@ section.resume-section .resume-section-content {
   }
 }
 
-html[lang="el"]:not(.i18n-ready) body {
-  visibility: hidden;
+:root {
+  --bs-primary: #974a2d;
+  --bs-primary-rgb: 151, 74, 45;
+  --bs-link-color: #974a2d;
+  --bs-link-hover-color: #7a3c24;
+}
+
+.award-list {
+  list-style: none;
+  padding-left: 2rem;
+}
+.award-list > li {
+  position: relative;
+}
+.award-list .award-icon {
+  position: absolute;
+  left: -1.75rem;
+  top: 0.2em;
+  width: 1.1em;
+  height: 1.1em;
+  color: #ffc107;
+  fill: currentColor;
 }
 
 .nav-tools {
@@ -11042,7 +11074,7 @@ html[lang="el"]:not(.i18n-ready) body {
 .lang-switch button[aria-pressed="true"] {
   background: #fff;
   border-color: #fff;
-  color: #bd5d38;
+  color: #974a2d;
 }
 
 .lang-switch button:focus-visible {
