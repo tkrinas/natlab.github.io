@@ -3,39 +3,39 @@
 * Copyright 2013-2023 Start Bootstrap
 * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-resume/blob/master/LICENSE)
 */
-//
-// Scripts
-// 
 
-window.addEventListener('DOMContentLoaded', event => {
-
-    document.querySelectorAll('.lang-switch [data-lang]').forEach(function (btn) {
-        btn.addEventListener('click', function () {
-            applyLang(btn.getAttribute('data-lang'), true);
-        });
+document.querySelectorAll(".lang-switch [data-lang]").forEach(function (btn) {
+    btn.addEventListener("click", function () {
+        applyLang(btn.getAttribute("data-lang"), true);
     });
-    applyLang(resolveLang(), false);
+});
 
-    // Activate Bootstrap scrollspy on the main nav element
-    const sideNav = document.body.querySelector('#sideNav');
-    if (sideNav) {
-        new bootstrap.ScrollSpy(document.body, {
-            target: '#sideNav',
-            rootMargin: '0px 0px -40%',
-        });
-    };
-
-    // Collapse responsive navbar when toggler is visible
-    const navbarToggler = document.body.querySelector('.navbar-toggler');
-    const responsiveNavItems = [].slice.call(
-        document.querySelectorAll('#navbarResponsive .nav-link')
-    );
-    responsiveNavItems.map(function (responsiveNavItem) {
-        responsiveNavItem.addEventListener('click', () => {
-            if (window.getComputedStyle(navbarToggler).display !== 'none') {
-                navbarToggler.click();
-            }
-        });
+var navbarToggler = document.querySelector(".navbar-toggler");
+var mobileNav = window.matchMedia("(max-width: 991.98px)");
+document.querySelectorAll("#navbarResponsive .nav-link").forEach(function (link) {
+    link.addEventListener("click", function () {
+        if (mobileNav.matches) navbarToggler.click();
     });
+});
 
+requestAnimationFrame(function () {
+    var byId = {};
+    document.querySelectorAll("#sideNav .nav-link").forEach(function (a) {
+        var href = a.getAttribute("href") || "";
+        if (href.charAt(0) === "#") byId[href.slice(1)] = a;
+    });
+    var current = null;
+    var obs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            var link = byId[entry.target.id];
+            if (!link || link === current) return;
+            if (current) current.classList.remove("active");
+            link.classList.add("active");
+            current = link;
+        });
+    }, { rootMargin: "0px 0px -40% 0px" });
+    document.querySelectorAll("section.resume-section[id]").forEach(function (section) {
+        obs.observe(section);
+    });
 });

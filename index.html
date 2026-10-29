@@ -56,64 +56,7 @@
         <link rel="preload" href="/assets/fonts/sofia-sans-extra-condensed-latin-700-normal.woff2" as="font" type="font/woff2" crossorigin>
         <link rel="preload" href="/assets/fonts/sofia-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
         <!-- Above-the-fold: nav + about. Full theme CSS loads without blocking paint. -->
-        <style>
-            @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/sofia-sans-latin-400-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-            @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:400;font-display:swap;src:url("/assets/fonts/sofia-sans-greek-400-normal.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
-            @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:800;font-display:swap;src:url("/assets/fonts/sofia-sans-latin-800-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-            @font-face{font-family:"Sofia Sans";font-style:normal;font-weight:800;font-display:swap;src:url("/assets/fonts/sofia-sans-greek-800-normal.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
-            @font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:500;font-display:swap;src:url("/assets/fonts/sofia-sans-extra-condensed-latin-500-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-            @font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:500;font-display:swap;src:url("/assets/fonts/sofia-sans-extra-condensed-greek-500-normal.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
-            @font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:700;font-display:swap;src:url("/assets/fonts/sofia-sans-extra-condensed-latin-700-normal.woff2") format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}
-            @font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:700;font-display:swap;src:url("/assets/fonts/sofia-sans-extra-condensed-greek-700-normal.woff2") format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}
-            @font-face{font-family:"Sofia Sans Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Roboto");size-adjust:97.4%}
-            @font-face{font-family:"Sofia Sans Extra Condensed Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Roboto");size-adjust:98%}
-            *,*::before,*::after{box-sizing:border-box}
-            :root{--bs-primary:#974a2d;--bs-primary-rgb:151,74,45;--bs-link-color:#974a2d;--bs-link-hover-color:#7a3c24}
-            body{margin:0;padding-top:4rem;font-family:"Sofia Sans","Sofia Sans Fallback",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:1rem;line-height:1.5;color:#6c757d;background:#fff}
-            a{color:#974a2d}
-            h1{margin:0;font-family:"Sofia Sans Extra Condensed","Sofia Sans Extra Condensed Fallback",system-ui,sans-serif;font-weight:700;line-height:1;text-transform:uppercase;color:#343a40;font-size:calc(1.725rem + 5.7vw)}
-            .text-primary{color:#974a2d!important}
-            .mb-0{margin-bottom:0!important}
-            .mb-5{margin-bottom:3rem!important}
-            .p-0{padding:0!important}
-            .subheading{font-family:"Sofia Sans Extra Condensed","Sofia Sans Extra Condensed Fallback",system-ui,sans-serif;text-transform:uppercase;font-weight:500;font-size:1.5rem}
-            p{margin:0 0 1rem}
-            p.lead{font-size:1.15rem;font-weight:400}
-            .d-none{display:none!important}
-            .d-block{display:block!important}
-            .collapse:not(.show){display:none}
-            .img-fluid{max-width:100%;height:auto}
-            .rounded-circle{border-radius:50%!important}
-            .mx-auto{margin-left:auto;margin-right:auto}
-            #sideNav{position:fixed;top:0;right:0;left:0;z-index:1030;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:.5rem 1rem;background:#974a2d}
-            .navbar-brand{color:#fff;text-decoration:none;font-size:1rem;line-height:1.15;flex:1 1 auto;min-width:0;max-width:calc(100% - 11rem);margin-right:.5rem;white-space:normal}
-            .nav-tools{display:flex;align-items:center;flex-shrink:0;gap:.5rem;margin-left:auto}
-            .lang-switch{display:inline-flex;gap:.35rem}
-            .lang-switch button{min-width:2.75rem;min-height:2.75rem;padding:0 .65rem;border:1px solid rgba(255,255,255,.75);border-radius:.25rem;background:transparent;color:#fff;font:700 .85rem/1 inherit;cursor:pointer}
-            .lang-switch button[aria-pressed="true"]{background:#fff;border-color:#fff;color:#974a2d}
-            .navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;color:#fff;background:transparent;border:1px solid rgba(255,255,255,.1);border-radius:.375rem}
-            .navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;background:center/100% no-repeat url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}
-            section.resume-section{display:flex;align-items:center;padding:5rem 1rem;max-width:75rem}
-            .resume-section-content{width:100%}
-            .social-icons .social-icon{display:inline-flex;align-items:center;justify-content:center;height:3.5rem;width:3.5rem;background:#495057;color:#fff;border-radius:100%;font-size:1.5rem;margin-right:1.5rem}
-            .social-icons .social-icon:last-child{margin-right:0}
-            .social-icons .social-icon svg,.icon-svg{width:1.15em;height:1.15em;fill:currentColor}
-            @media (min-width:992px){
-                body{padding-top:0;padding-left:17rem}
-                .d-lg-none{display:none!important}
-                .d-lg-block{display:block!important}
-                .navbar-expand-lg .navbar-toggler{display:none}
-                #sideNav{left:0;right:auto;width:17rem;height:100vh;padding:0;flex-direction:column;flex-wrap:nowrap;text-align:center}
-                #sideNav .navbar-brand{display:flex;flex:none;max-width:none;margin:auto auto 0;padding:.5rem;order:1}
-                #sideNav .navbar-brand img{max-width:10rem;max-height:10rem;border:.5rem solid rgba(255,255,255,.2)}
-                #sideNav .navbar-collapse{display:flex!important;flex-grow:0;width:100%;order:2;margin-bottom:0}
-                #sideNav .navbar-nav{display:flex;flex-direction:column;width:100%;padding:0;margin:0;list-style:none}
-                #sideNav .nav-link{display:block;color:rgba(255,255,255,.55);text-decoration:none;font-weight:800;letter-spacing:.05rem;text-transform:uppercase;padding:.5rem}
-                #sideNav .nav-tools{order:3;justify-content:center;margin:.75rem auto auto}
-                section.resume-section{padding:5rem 3rem}
-            }
-            @media (min-width:1200px){h1{font-size:6rem}}
-        </style>
+        <style>@font-face{font-family:"Sofia Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/sofia-sans-latin-400-normal.woff2)format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Sofia Sans";font-style:normal;font-weight:400;font-display:swap;src:url(/assets/fonts/sofia-sans-greek-400-normal.woff2)format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}@font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/sofia-sans-extra-condensed-latin-500-normal.woff2)format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:500;font-display:swap;src:url(/assets/fonts/sofia-sans-extra-condensed-greek-500-normal.woff2)format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}@font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/sofia-sans-extra-condensed-latin-700-normal.woff2)format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD}@font-face{font-family:"Sofia Sans Extra Condensed";font-style:normal;font-weight:700;font-display:swap;src:url(/assets/fonts/sofia-sans-extra-condensed-greek-700-normal.woff2)format("woff2");unicode-range:U+0370-0377,U+037A-037F,U+0384-038A,U+038C,U+038E-03A1,U+03A3-03FF}@font-face{font-family:"Sofia Sans Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Roboto");size-adjust:97.4%}@font-face{font-family:"Sofia Sans Extra Condensed Fallback";src:local("Arial"),local("Helvetica Neue"),local("Helvetica"),local("Roboto");size-adjust:98%}*,::after,::before{box-sizing:border-box}:root{--bs-primary:#974a2d;--bs-primary-rgb:151,74,45;--bs-link-color:#974a2d;--bs-link-hover-color:#7a3c24}body{margin:0;padding-top:4rem;font-family:"Sofia Sans","Sofia Sans Fallback",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;font-size:1rem;line-height:1.5;color:#6c757d;background:#fff}a{color:#974a2d}h1{margin:0;font-family:"Sofia Sans Extra Condensed","Sofia Sans Extra Condensed Fallback",system-ui,sans-serif;font-weight:700;line-height:1;text-transform:uppercase;color:#343a40;font-size:calc(1.725rem + 5.7vw)}.text-primary{color:#974a2d!important}.mb-0{margin-bottom:0!important}.mb-5{margin-bottom:3rem!important}.p-0{padding:0!important}.subheading{font-family:"Sofia Sans Extra Condensed","Sofia Sans Extra Condensed Fallback",system-ui,sans-serif;text-transform:uppercase;font-weight:500;font-size:1.5rem}p{margin:0 0 1rem}p.lead{font-size:1.15rem;font-weight:400}.d-none{display:none!important}.d-block{display:block!important}.collapse:not(.show){display:none}.img-fluid{max-width:100%;height:auto}.rounded-circle{border-radius:50%!important}.mx-auto{margin-left:auto;margin-right:auto}#sideNav{position:fixed;top:0;right:0;left:0;z-index:1030;flex-wrap:wrap;justify-content:space-between;padding:.5rem 1rem;background:#974a2d}.navbar-brand{color:#fff;text-decoration:none;font-size:1rem;line-height:1.15;flex:1 1 auto;min-width:0;max-width:calc(100% - 11rem);margin-right:.5rem;white-space:normal}#sideNav,.nav-tools{display:flex;align-items:center}.nav-tools{flex-shrink:0;gap:.5rem;margin-left:auto}.lang-switch{display:inline-flex;gap:.35rem}.lang-switch button{min-width:2.75rem;min-height:2.75rem;padding:0 .65rem;border:1px solid rgba(255,255,255,.75);border-radius:.25rem;background:0 0;color:#fff;font:400 .85rem/1 inherit;cursor:pointer}.lang-switch button[aria-pressed=true]{background:#fff;border-color:#fff;color:#974a2d}.navbar-toggler{padding:.25rem .75rem;font-size:1.25rem;line-height:1;color:#fff;background:0 0;border:1px solid rgba(255,255,255,.1);border-radius:.375rem}.navbar-toggler-icon{display:inline-block;width:1.5em;height:1.5em;vertical-align:middle;background:center/100% no-repeat url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255,255,255,0.55)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")}section.resume-section{display:flex;align-items:center;padding:5rem 1rem;max-width:75rem}.resume-section-content{width:100%}.social-icons .social-icon{display:inline-flex;align-items:center;justify-content:center;height:3.5rem;width:3.5rem;background:#495057;color:#fff;border-radius:100%;font-size:1.5rem;margin-right:1.5rem}.social-icons .social-icon:last-child{margin-right:0}.icon-svg,.social-icons .social-icon svg{width:1.15em;height:1.15em;fill:currentColor}@media (min-width:992px){body{padding-top:0;padding-left:17rem}.d-lg-none{display:none!important}.d-lg-block{display:block!important}.navbar-expand-lg .navbar-toggler{display:none}#sideNav{left:0;right:auto;width:17rem;height:100vh;padding:0;flex-direction:column;flex-wrap:nowrap;text-align:center}#sideNav .navbar-brand{display:flex;flex:none;max-width:none;margin:auto auto 0;padding:.5rem;order:1}#sideNav .navbar-brand img{max-width:10rem;max-height:10rem;border:.5rem solid rgba(255,255,255,.2)}#sideNav .navbar-collapse{display:flex!important;flex-grow:0;width:100%;order:2;margin-bottom:0}#sideNav .navbar-nav{display:flex;flex-direction:column;width:100%;padding:0;margin:0;list-style:none}#sideNav .nav-link{display:block;color:rgba(255,255,255,.55);text-decoration:none;font-weight:800;letter-spacing:.05rem;text-transform:uppercase;padding:.5rem}#sideNav .nav-tools{order:3;justify-content:center;margin:.75rem auto auto}section.resume-section{padding:5rem 3rem}}@media (min-width:1200px){h1{font-size:6rem}}</style>
         <link href="css/styles.css" rel="stylesheet" media="print" onload="this.media='all'" />
         <noscript><link href="css/styles.css" rel="stylesheet" /></noscript>
         <script type="application/ld+json">
@@ -211,20 +154,6 @@
                 }
             ]
             }
-        </script>
-
-        <!-- Google tag (gtag.js), loaded after first paint -->
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-FH3F266V9H');
-            window.addEventListener('load', function () {
-                var s = document.createElement('script');
-                s.src = 'https://www.googletagmanager.com/gtag/js?id=G-FH3F266V9H';
-                s.async = true;
-                document.head.appendChild(s);
-            });
         </script>
 
     </head>
@@ -696,6 +625,23 @@
             <p class="site-note"><span data-i18n="footer.analytics">Visits are counted with Google Analytics.</span> <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" data-i18n="footer.privacy">Google's privacy policy</a>.</p>
         </main>
 
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            function loadGtag() {
+                if (loadGtag.done) return;
+                loadGtag.done = true;
+                gtag("js", new Date());
+                gtag("config", "G-FH3F266V9H");
+                var s = document.createElement("script");
+                s.src = "https://www.googletagmanager.com/gtag/js?id=G-FH3F266V9H";
+                s.async = true;
+                document.head.appendChild(s);
+            }
+            ["pointerdown", "keydown"].forEach(function (ev) {
+                window.addEventListener(ev, loadGtag, { once: true, passive: true });
+            });
+        </script>
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" defer></script>
         <script src="js/i18n.js" defer></script>
